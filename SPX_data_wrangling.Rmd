@@ -1,14 +1,3 @@
----
-title: "DSA212: Assignment 1"
-output: html_notebook
----
-
-Name: Elizabeth Cheng Wei
-Student ID: 01394073
-Section: G2 Wed
-
-
-# Exercise 1 
 
 ```{r}
 library(readr); library(dplyr) #1)Load readr and dplyr
@@ -18,11 +7,6 @@ DF <- read.csv("oxfordmanrealizedvolatilityindices.csv") #2)Read csv data into D
 glimpse(DF) #3)Glimpse DF
 
 ```
-
-3)
-DF has 20 columns and 143, 760 rows. 
-
-# Exercise 2 
 
 ```{r}
 library(magrittr) #1)Load magrittr
@@ -34,13 +18,6 @@ DF <- DF %>% #4)Overwrite DF
 glimpse(DF) #5)Glimpse DF
 
 ```
-
-5)
-DF now has 4 columns and 143, 760 rows.
-
-Aside: Hi prof, I know the question says to choose column X1, but it's called X in the dataframe I retrieved, so I'm using X for 2). 
-
-# Exercise 3 
 
 ```{r}
 library(lubridate) #1)Load lubridate
@@ -54,11 +31,6 @@ glimpse(SPX) #5)Glimpse SPX
 
 ```
 
-5)
-SPX has 4 columns and 5, 111 rows. 
-
-# Exercise 4 
-
 ```{r}
 SPX <- SPX %>% #2) Overwrite SPX
   mutate(logRV = log(RV), sqrRV = sqrt(RV), logRK = log(RK), sqrRK = sqrt(RK)) #1)Add new columns
@@ -66,11 +38,6 @@ SPX <- SPX %>% #2) Overwrite SPX
 glimpse(SPX) #3)Glimpse SPX
 
 ```
-
-3)
-SPX now has 8 columns and 5, 111 rows. 
-
-# Exercise 5 
 
 ```{r}
 save(SPX, file = "SPX_RMs_2000-01-03_2020-05-17.Rda") #1)Save SPX without file compression
@@ -81,8 +48,6 @@ load(file = "SPX_RMs_2000-01-03_2020-05-17.Rda") #3)Load saved file
 head(SPX, 9) #4)View first nine rows of SPX
 
 ```
-
-# Exercise 6 
 
 ```{r}
 library(ggplot2) #1)Load ggplot2
@@ -104,8 +69,6 @@ plot_2
 
 ```
 
-# Exercise 7 
-
 ```{r}
 install.packages("gridExtra") #1)Install gridExtra
 ```
@@ -116,10 +79,6 @@ library(gridExtra) #1)Load package
 grid.arrange(plot_1, plot_2) #2)Apply function to plot graphs together
 
 ```
-
-PDF export attached to assignment submission seperately. 
-
-# Exercise 8 
 
 ```{r}
 #1)Create density plot for RV
@@ -139,8 +98,6 @@ plot_4 <- ggplot(data = SPX, aes(x = RK)) +
 grid.arrange(plot_1, plot_2, plot_3, plot_4, nrow = 2) #3)Plot graphs together
 
 ```
-
-# Exercise 9 
 
 ```{r}
 #1)Create density plot of logRV and logRK
@@ -162,8 +119,6 @@ plot_6 <- ggplot(data = SPX) +
 grid.arrange(plot_5, plot_6) #3)Plot graphs together
 
 ```
-
-# Exercise 10 
 
 ```{r}
 RV <- select(SPX, RV)
@@ -207,7 +162,6 @@ prop_outliers(RV) #2)Apply prop_outliers to RV variable from SPX
 
 ```
 
-3) 
 Proportion of outliers: 0.097633 (5sf)
 Proportion of extreme outliers: 0.053414 (5sf)
 
