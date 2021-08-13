@@ -1,0 +1,213 @@
+---
+title: "DSA212: Assignment 1"
+output: html_notebook
+---
+
+Name: Elizabeth Cheng Wei
+Student ID: 01394073
+Section: G2 Wed
+
+
+# Exercise 1 
+
+```{r}
+library(readr); library(dplyr) #1)Load readr and dplyr
+
+DF <- read.csv("oxfordmanrealizedvolatilityindices.csv") #2)Read csv data into DF
+
+glimpse(DF) #3)Glimpse DF
+
+```
+
+3)
+DF has 20 columns and 143, 760 rows. 
+
+# Exercise 2 
+
+```{r}
+library(magrittr) #1)Load magrittr
+
+DF <- DF %>% #4)Overwrite DF
+  select(X, Symbol, rv5, rk_parzen) %>% #2)Choose columns 
+  rename(t = X, ticker_symbol = Symbol, RV = rv5, RK = rk_parzen) #3)Rename columns
+
+glimpse(DF) #5)Glimpse DF
+
+```
+
+5)
+DF now has 4 columns and 143, 760 rows.
+
+Aside: Hi prof, I know the question says to choose column X1, but it's called X in the dataframe I retrieved, so I'm using X for 2). 
+
+# Exercise 3 
+
+```{r}
+library(lubridate) #1)Load lubridate
+
+SPX <- DF %>% #4)Assign to SPX 
+  filter(ticker_symbol == ".SPX") %>% #2)Choose rows that correspond to S&P500
+  mutate(t_date = date(t)) %>% #3)Convert t to <date> datatype
+  select(-t) #Remove column with <chr> dates 
+
+glimpse(SPX) #5)Glimpse SPX
+
+```
+
+5)
+SPX has 4 columns and 5, 111 rows. 
+
+# Exercise 4 
+
+```{r}
+SPX <- SPX %>% #2) Overwrite SPX
+  mutate(logRV = log(RV), sqrRV = sqrt(RV), logRK = log(RK), sqrRK = sqrt(RK)) #1)Add new columns
+
+glimpse(SPX) #3)Glimpse SPX
+
+```
+
+3)
+SPX now has 8 columns and 5, 111 rows. 
+
+# Exercise 5 
+
+```{r}
+save(SPX, file = "SPX_RMs_2000-01-03_2020-05-17.Rda") #1)Save SPX without file compression
+
+rm(list = ls()) #2)Clear objects in workspace
+
+load(file = "SPX_RMs_2000-01-03_2020-05-17.Rda") #3)Load saved file
+head(SPX, 9) #4)View first nine rows of SPX
+
+```
+
+# Exercise 6 
+
+```{r}
+library(ggplot2) #1)Load ggplot2
+
+#2)Create time series plot for RV
+plot_1 <- ggplot(data = SPX, aes(x = t_date, y = RV)) + 
+  geom_line(color = "#000000", size = 0.25) + 
+  theme_minimal(base_size = 16) +
+  ggtitle("S&P 500 RV")
+
+#3)Create time series plot for RK
+plot_2 <- ggplot(data = SPX, aes(x = t_date, y = RK)) + 
+  geom_line(color = "#000000", size = 0.25) + 
+  theme_minimal(base_size = 16) +
+  ggtitle("S&P 500 RK")
+
+plot_1 
+plot_2
+
+```
+
+# Exercise 7 
+
+```{r}
+install.packages("gridExtra") #1)Install gridExtra
+```
+
+```{r}
+library(gridExtra) #1)Load package
+
+grid.arrange(plot_1, plot_2) #2)Apply function to plot graphs together
+
+```
+
+PDF export attached to assignment submission seperately. 
+
+# Exercise 8 
+
+```{r}
+#1)Create density plot for RV
+plot_3 <- ggplot(data = SPX, aes(x = RV)) +
+  geom_density(color = "#619CFF", size = 0.5) +
+  theme_minimal(base_size = 16) +
+  ggtitle("S&P 500 RV") +
+  ylab("Density estimate")
+
+#2)Create density plot for RK
+plot_4 <- ggplot(data = SPX, aes(x = RK)) +
+  geom_density(color = "#619CFF", size = 0.5) +
+  theme_minimal(base_size = 16) +
+  ggtitle("S&P 500 RK") +
+  ylab("Density estimate")
+
+grid.arrange(plot_1, plot_2, plot_3, plot_4, nrow = 2) #3)Plot graphs together
+
+```
+
+# Exercise 9 
+
+```{r}
+#1)Create density plot of logRV and logRK
+plot_5 <- ggplot(data = SPX) +
+  geom_density(aes(x = logRV), color = "#F8766D", linetype = "solid", size = 0.8) +
+  geom_density(aes(x = logRK), color = "#00BA38", linetype = "dashed", size = 0.8) +
+  theme_minimal(base_size = 16) +
+  ggtitle("S&P 500 log-transformed realized measures") +
+  ylab("Density estimate") + xlab("log-RV (solid), log-RK (dashed)")
+
+#2)Create density plot for sqrRV and sqrRK
+plot_6 <- ggplot(data = SPX) +
+  geom_density(aes(x = sqrRV), color = "#F8766D", linetype = "solid", size = 0.8) +
+  geom_density(aes(x = sqrRK), color = "#00BA38", linetype = "dashed", size = 0.8) +
+  theme_minimal(base_size = 16) +
+  ggtitle("S&P 500 sqrt-transformed realized measures") +
+  ylab("Density estimate") + xlab("sqrt-RV (solid), sqrt-RK (dashed)")
+
+grid.arrange(plot_5, plot_6) #3)Plot graphs together
+
+```
+
+# Exercise 10 
+
+```{r}
+RV <- select(SPX, RV)
+
+#1)tukey_fence function:
+tukey_fence <- function(x, k) {
+  s <- summary(x)
+  
+  Q1 <- as.numeric(substr(s[2], 9, nchar(s[2]))) #Coerce value of first quartile of x to numeric type
+  Q3 <- as.numeric(substr(s[5], 9, nchar(s[5]))) #Coerce value of third quartile of x to numeric type
+  IQR <- Q3 - Q1 #Interquartile range
+  
+  L <- Q1 - k*IQR #Lower endpoint of Tukey fence
+  U <- Q3 + k*IQR #Higher endpoint of Tukey fence
+  
+  return(c(L, U)) #Return vector 
+}
+
+tukey_fence(RV, 1.5) #Made sure tukey_fence works
+tukey_fence(RV, 3)
+
+```
+
+```{r}
+#1)prop_outliers function:
+prop_outliers <- function(x) {
+  calc_outliers <- tukey_fence(x, 1.5) #Call tukey_fence first time for k=1.5 (outliers)
+  outliers <- x %>%
+    filter(x <= calc_outliers[1] | x >= calc_outliers[2]) #Filter for outliers
+  x_outliers <- nrow(outliers) / nrow(x) #Number of outliers/total number of rows
+  
+  calc_extreme_outliers <- tukey_fence(x, 3) #Call tukey_fence second time for k=3 (extreme outliers)
+  extreme_outliers <- x %>% 
+    filter(x <= calc_extreme_outliers[1] | x >= calc_extreme_outliers[2]) #Filter for extreme outliers
+  x_extreme_outliers <- nrow(extreme_outliers) / nrow(x) #Number of outliers/total number of rows
+  
+  return(c(x_outliers, x_extreme_outliers)) #Return vector with first element proportion of outliers, second element proportion of extreme outliers 
+}
+
+prop_outliers(RV) #2)Apply prop_outliers to RV variable from SPX
+
+```
+
+3) 
+Proportion of outliers: 0.097633 (5sf)
+Proportion of extreme outliers: 0.053414 (5sf)
+
