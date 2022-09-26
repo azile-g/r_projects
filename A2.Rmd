@@ -1,0 +1,145 @@
+---
+title: "A2"
+output: html_document
+---
+
+#Qn 1
+```{r}
+library(fitdistrplus)
+cars_df <- read.csv("Cars2022A.csv", stringsAsFactors = TRUE)
+cars_df
+col <- c(cars_df$Problem)
+fpois <- fitdist(col, distr = "pois")
+summary(fpois)
+as.data.frame(table(col))
+result <- gofstat(fpois, chisqbreaks = c(0:4), discrete = TRUE, fitnames = c("Poisson"))
+result
+plot(fpois)
+summary(fpois)
+#at least one but less than 4 problems:
+lambda <- 1.285 
+#P(x=4) - P(x=1)
+prob_c = ppois(4, lambda) - ppois(1, lambda)
+```
+
+#Qn2
+```{r}
+calls_df <- read.csv("Calls2022A.csv", stringsAsFactors = TRUE)
+calls_df
+col <- c(calls_df$Time)
+
+norm <- fitdist(col, distr = "norm")
+log_norm <- fitdist(col, distr = "lnorm")
+exp <- fitdist(col, distr = "exp")
+summary(norm)
+summary(log_norm)
+summary(exp)
+#a) exp has the higest log likelihood at -605.11 and lowest AIC at 1212.222 and BIC at 1216.396. Therefore exp is the best fit model. 
+
+#b)
+plot(exp)
+
+#c) estimate is 0.7705521 with stdev. error of 0.03517067
+est <- 0.7705521
+
+#d) 
+#critical value is 1.63/sqrt(n) for alpha=0.01
+crit_val <- 1.63/sqrt(length(exp))
+ks.test(col, pexp, est)
+#D = 0.064731, crit_val = 0.3953331
+#Since the KS stastic > the KS critical Value, do not reject the null hypothesis. There is not enough evidence to show that the fit residuals do not follow a normal dist. hecne it is a good fit. 
+
+#e)
+#between 3 and 7, P(x < 7) - p(x < 3)
+prob_e <- pexp(7, est) - pexp(3, est)
+prob_e
+```
+
+#Qn3
+```{r}
+singtel_df <- read.csv("SingTel2022A.csv", stringsAsFactors = TRUE)
+singtel_df
+
+#a)
+price <- singtel_df$AdjClose  # put the closing price to object "price"
+volume <- singtel_df$Volume
+rate <- NULL  # define a new object "rate" without any elements
+# calculate the rates of daily change and put them to object "rate"
+for (i in 1:(length(price)-1)) 
+{rate[i] <- (price[i]-price[i+1])/price[i+1]}  
+frate <- fitdist(rate, "norm")
+summary(frate)
+var_a <- sd(rate)*40000*2.47*qnorm(0.985, 0, 1)
+
+#b) 
+AbsVaR <- -1*quantile(rate, 0.01)*40000*2.47
+meanR <- mean(rate)*40000*2.47
+var_b <- meanR+AbsVaR
+
+var_a
+var_b
+
+#2975.019
+#3836.629 
+```
+
+#Qn4
+```{r}
+open <- singtel_df$Open
+close <- singtel_df$Close
+change <- open - close
+# using lm() function to fit the line with 'test' as response and 'assign' as predictor 
+reg.fit <- lm(change~volume)
+summary(reg.fit)
+#since the pvalue 0.1966 > 0.05, there is not enough evidence to reject the null hypothesis, and cannot conclude that there is a statistically significant linear relationship between the change in prices and volume. Thus do not use linear regression. 
+```
+
+#Qn5
+```{r}
+salary_df <- read.csv("Salary2022A.csv", stringsAsFactors = TRUE)
+salary_df
+gpa <- salary_df$GPA
+sal <- salary_df$Salary
+
+#a) 
+linear_reg <- lm(sal~gpa)
+linear_reg
+summary(linear_reg)
+names(linear_reg)
+plot(gpa, sal)
+abline(lm(sal~gpa), lwd = 3, col = "blue")
+
+#b)
+#Coefficients:
+#(Intercept)          gpa  
+#      821.8        702.8  
+#where salary = y and gpa = x, 
+# y = 821.8 + 702.8x 
+
+#c)
+residual <- residuals(lm(sal~gpa))
+plot(gpa, residual)
+#residuals appear to be random, hence the linear regression model holds for these two columns. 
+
+#d)
+#p value < 2.2e-16 < 0.05, hence there is enough evidence to reject the null hypothesis, and there is not enough evidence to conclude that there is a statistically significant linear relationship between the two factors (gpa and salary).
+
+#e) 
+conf_interval = confint(linear_reg, level = 0.95)
+conf_interval
+#confidence interval: (680.6572, 724.9151)
+
+#f) 
+confint_33 <- predict(linear_reg, data.frame(gpa = c(3.3)), interval = "confidence", level = 0.95)
+confint_33
+#confidence interval estimate for student with 3.3 GPA: (3129.156, 3152.88) 
+
+#g) 
+predint_32 <- predict(linear_reg, data.frame(gpa = c(3.2)), interval = "predict", level = 0.95)
+predint_32
+# prediction interval of student with 3.2 GPA = (2948.835, 3192.644)
+
+#h) 
+min(gpa)
+# the minimum gpa in this dataset is 2.21, which means the gpa 2.05 is out of sample, and it would not be valid to use this method for predicting the salary. 
+```
