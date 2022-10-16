@@ -26,6 +26,18 @@ summary(lm2)
 ```
 
 ```{r}
+regfit1 <- regsubsets(Balance~., Bank2022P, nvmax = 10)
+summary1 <- summary(regfit1)
+
+plot(summary1$bic, main = "Best subset procedure with BIC", xlab = "NUmber of variables", ylab = "BIC", type = "b")
+
+num1 <- which.min(summary1$bic)
+num1
+
+coef(regfit1, num1)
+```
+
+```{r}
 #Check VIF of lm2
 vif(lm2)
 
@@ -50,12 +62,9 @@ correlation2
 
 lm2_2 <- lm(Balance~Income_cent+Income_cent_sq+Cards+Gender, data = Bank2022P)
 vif(lm2_2)
-
 ```
 
-```{r}
-regfit.all <- regsubsets(Balance~.+I(Income^2), Bank2022P, nvmax=10)
-```
+
 
 
 
