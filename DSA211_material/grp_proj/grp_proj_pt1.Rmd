@@ -6,7 +6,55 @@ output: html_document
 ---
 
 ```{r}
+#dependencies
+library(car)
+library(dplyr)
+library(magrittr)
+
+#reader
 Bank2022P <- read.csv("Bank2022P.csv", stringsAsFactors = TRUE)
+```
+
+```{r}
+#Run initial linear regression on all independent variables
+lm1 <- lm(Balance~.+I(Income^2), data = Bank2022P)
+summary(lm1)
+
+#Run linear regression on all significant independent variables, Income, Income^2, Gender and Cards
+lm2 <- lm(Balance~Income+I(Income^2)+Cards+Gender, data = Bank2022P)
+summary(lm2)
+```
+
+```{r}
+#Check VIF of lm2
+vif(lm2)
+
+#Structural co-linearity 
+plot(Income, I(Income^2), main = "Scatterplot of Income and Income^2", xlab = "Income", ylab = "Income^2")
+correlation1 <- cor(Income, I(Income^2), method = "pearson")
+correlation1
+
+#centered income variable to correct for structural co-linearity 
+Bank2022P <- Bank2022P %>% 
+  mutate(Income_cent = Income - mean(Income)) %>% 
+  mutate(Income_cent_sq = Income_cent^2) %>% 
+  select (-Income)
+Bank2022P
+
+Income_cent <- c(Bank2022P$Income_cent)
+Income_cent_sq <- c(Bank2022P$Income_cent_sq)
+
+plot(Income_cent, Income_cent_sq, main = "Scatterplot of centered Income and it's square", xlab = "Income_cent", ylab = "Income_cent_sq")
+correlation2 <- cor(Income_cent, Income_cent_sq, method = "pearson")
+correlation2
+
+lm2_2 <- lm(Balance~Income_cent+Income_cent_sq+Cards+Gender, data = Bank2022P)
+vif(lm2_2)
+
+```
+
+```{r}
+regfit.all <- regsubsets(Balance~.+I(Income^2), Bank2022P, nvmax=10)
 ```
 
 

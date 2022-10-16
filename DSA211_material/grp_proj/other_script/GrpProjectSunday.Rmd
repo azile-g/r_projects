@@ -1,0 +1,59 @@
+---
+title: "Assignment_1_SUNDAY"
+author: "Adam Ahmad Samdin"
+date: "`r Sys.Date()`"
+output: html_document
+---
+```{r}
+
+library(readr)
+Bank2022P <- read.csv("meow/DSA211/GroupProject/Bank2022P.csv", stringsAsFactors = TRUE)
+View(Bank2022P)
+attach(Bank2022P)
+
+names(Bank2022P)
+
+dim(Bank2022P) #looking at matrix
+any(Bank2022P=="NA") #check for any missing values
+
+reg.fit.2 <- regsubsets(Balance~.+Income, Bank2022P) # Originally, seeing if Income is a good predictor. 
+
+a <- which.min(summary(reg.fit.2)$bic) #Plotting would also be a good idea to include
+coef(reg.fit.2, a) #Sees that Gender and Income is the best fit
+
+BIC(lm(Balance~Income+Gender, Bank2022P)) # Getting the SBC for Gender and Income. However, upon closer inspection...
+
+summary(reg.fit.2) # Income is included at all levels. Since we suspect income^2 is a better fit, perform stepwise while forcing income and income^2 to be inside. Have to force both because forcing Income^2 without income is not accurate (probably need explain more why)
+
+reg.fit.3 <- regsubsets(Balance~.+I(Income^2), force.in = c("Income","I(Income^2)"), Bank2022P) #forcing income and income^2 to be inside. Cannot separate the two, because inaccurate etc...
+
+summary(reg.fit.3)
+names(summary(reg.fit.3))
+summary(reg.fit.3)$bic
+which.min(summary(reg.fit.3)$bic)
+
+plot(summary(reg.fit.3)$bic, 
+     main="SBC plot", xlab="Number of Variables", ylab="SBC", type="b")
+
+b <- which.min(summary(reg.fit.3)$bic)
+
+coef(reg.fit.3, b) #Income, Income^2, Rating, Cards, Gender
+
+BIC(lm(Balance~Income+Rating+Cards+Gender+I(Income^2))) #Lower BIC than the earlier equation without Income^2. Now, need to test for interaction terms. Two ways to do this. First is stepwise again, second is brute force. Not sure which is better. 
+
+reg.fit.4 <- regsubsets(Balance~Income+I(Income^2)+Rating+Cards+Gender+I(Income^2)*Gender*Cards*Rating*Income, force.in = c("I(Income^2)", "Income", "Cards", "Rating", "GenderFemale"), Bank2022P) #Run for interaction terms, forcing to include the original terms. If don't include, the stepwise might select interaction terms without selecting the base terms
+
+summary(reg.fit.4)
+names(summary(reg.fit.4))
+summary(reg.fit.4)$bic
+mininteractions <- which.min(summary(reg.fit.4)$bic)
+
+coef(reg.fit.4, mininteractions) #Gender interacting with income and income^2 is significant, and gender*cards. While on here only shows Income^2, must include Income as well as interaction terms will interact not only with Income but with Income^2 as well. Perform BIC comparison on these two models with interaction terms, and without
+
+BIC(lm(Balance~Income+Rating+Cards+Gender+I(Income^2),Bank2022P)) #BIC of base terms
+BIC(lm(Balance~Income+I(Income^2)+Rating+Cards+Gender+Cards*Gender,Bank2022P))  #BIC of base terms + Cards*Gender
+BIC(lm(Balance~Income*Gender+Rating+Cards+Gender+I(Income^2)*Gender+Income,Bank2022P)) #BIC of base terms + Income*Gender + Income^2*Gender
+BIC(lm(Balance~Income+I(Income^2)+Rating+Cards+Gender+Cards*Gender+I(Income^2)*Gender+Income*Gender, Bank2022P)) #BIC of base terms + Cards*Gender + I(Income^2)*Gender and Income*Gender
+
+#Lowest BIC = 15140.98
+```
