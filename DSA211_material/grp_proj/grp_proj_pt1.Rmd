@@ -1,0 +1,13 @@
+---
+title: "grp_proj"
+author: "Liz"
+date: "2022-10-16"
+output: html_document
+---
+
+```{r}
+Bank2022P <- read.csv("Bank2022P.csv", stringsAsFactors = TRUE)
+```
+
+
+

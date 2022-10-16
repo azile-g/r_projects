@@ -1,0 +1,67 @@
+---
+title: "DSA211_GroupProject"
+author: "Adam Ahmad Samdin"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r}
+
+Bank2022P <- read.csv("Bank2022P.csv", stringsAsFactors = TRUE)
+#View(Bank2022P)
+summary(Bank2022P)
+attach(Bank2022P)
+
+#multiple linear regression using all variables
+lm1 <- lm(Balance~., data=Bank2022P)
+summary(lm1)
+
+#multiple linear regression using income, education, gender and cards
+lm2 <- lm(Balance~Income+Education+Gender+Cards, data=Bank2022P)
+summary(lm2)
+
+#multiple linear regression using all variables + income^2
+lm3 <- lm(Balance~.+I(Income^2), data=Bank2022P)
+summary(lm3)
+
+#multiple linear regression using income,income^2, ethnicity, gender and cards
+lm4 <- lm(Balance~Income+I(Income^2)+Ethnicity+Gender+Cards, data=Bank2022P)
+summary(lm4)
+
+#multiple linear regression using income,income^2, gender and cards
+lm5 <- lm(Balance~Income+I(Income^2)+Gender+Cards, data=Bank2022P)
+summary(lm5)
+
+```
+
+```{r}
+library(car)
+vif(lm5)
+
+#Accounting for structural multicolinearity 
+
+```
+##Soln
+```{r}
+#1. Pairs function. See which is more related/unrelated
+pairs(data.frame(Income,Balance))
+# Categorical variables use boxplot
+#2. Discard those that are far off
+
+names(Bank2022P)
+
+#Adam - Income and Limit
+#YJ - Rating and Cards
+#Liz - Age and Education
+#Kowsi- Gender and Married
+#Rhonda - Ethnicity and Gender
+
+#3. Run regression on all
+#4. Test Income for quadratic. Test others for quadratic as well
+#5. VIF that 
+ 
+#6. Interaction terms to test it out
+#7. Choose the model
+#8. Residual testing to validate assumptions
+
+```

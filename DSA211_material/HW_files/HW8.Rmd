@@ -4,6 +4,24 @@ output: html_document
 date: "2022-10-16"
 ---
 
+#Answers:
+
+#a) 
+#Using best subset selection with bic: 
+#Balance =-499.7272117 -7.8392288(Income) + 0.2666445(Limit) + 23.1753794(Cards) + 429.6064203(Student)
+
+#b)
+#Using forward selection with cp:
+#Balance = -493.7341870 -7.7950824(Income) + 0.1936914(Limit) + 1.0911874(Rating) + 18.2118976(Cards) -0.6240560(Age) + 425.6099369(Student)
+
+#c) 
+#Using backwards selection with adjusted r-square
+#Balance = -488.6158695 -7.8036338(Income) + 0.1936237(Limit) + 1.0940490(Rating) + 18.1091708(Cards) -0.6206538(Age) -10.4531521(Gender) + 426.5812620(Student)
+
+#d) 
+#Using best subset selection with validation set approach
+#Balance = -499.7272117 -7.8392288(Income) + 0.2666445(Limit) + 23.1753794(Cards) + 429.6064203(Student)
+
 ```{r}
 library(ISLR)
 attach(Credit)
@@ -12,7 +30,69 @@ library(leaps)
 ```
 
 ```{r}
-fit1 <- regsubsets(Balance)
-  
+#best subset selection
+regfit1 <- regsubsets(Balance~.-ID, Credit, nvmax = 10)
+summary1 <- summary(regfit1)
+
+plot(summary1$bic, main = "Best subset procedure with BIC", xlab = "NUmber of variables", ylab = "BIC", type = "b")
+
+num1 <- which.min(summary1$bic)
+num1
+
+coef(regfit1, num1)
+```
+
+```{r}
+#best forward selection
+regfit2 <- regsubsets(Balance~.-ID, Credit, nvmax = 10, method = "forward")
+summary2 <- summary(regfit2)
+
+plot(summary2$cp, main = "Forward selection with cp", xlab = "Number of variables", ylab = "cp", type = "b")
+
+num2 <- which.min(summary2$cp)
+num2
+
+coef(regfit2, num2)
+```
+
+```{r}
+#backwards selection
+regfit3 <- regsubsets(Balance~.-ID, Credit, nvmax = 10, method = "backward")
+summary3 <- summary(regfit3)
+
+plot(summary3$adjr2, main = "Backwards selection with adjusted r-square", xlab = "Number of variables", ylab = "Adjusted r-square", type = "b")
+
+num3 <- which.max(summary3$adjr2)
+num3
+
+coef(regfit3, num3)
+```
+
+```{r}
+RNGkind(sample.kind = "Rounding")
+set.seed(121)
+
+train <- sample(c(TRUE, FALSE), nrow(Credit), rep = TRUE)
+test <- (!train)
+
+regfit4 <- regsubsets(Balance~.-ID, data = Credit[train, ], nvmax = 10)
+
+test.mat <- model.matrix(Balance~.-ID, data = Credit[test, ])
+val.error <- rep(NA, 10)
+
+for (i in 1:10) 
+  {
+  coefi <- coef(regfit4, id = i)
+  pred <- test.mat[ , names(coefi)]%*%coefi
+  val.error[i] <- mean((Credit$Balance[test]-pred)^2)
+}
+
+val.error
+
+plot(val.error, main = "best subset selection with validation set approach", xlab = "Number of variables", ylab = "Validation mean sqaure error", type = "b")
+
+num4 <- which.min(val.error)
+
+coef(regfit1, num4)
 ```
 

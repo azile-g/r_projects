@@ -1,0 +1,1001 @@
+Income,Limit,Rating,Cards,Age,Education,Gender,Married,Ethnicity,Balance
+286,2493,186,1,53,13, Male,Yes,Asian,741.47
+753,6481,462,2,56,14,Female,Yes,Caucasian,1287.52
+2702,3063,248,2,53,14,Female,No,Caucasian,3432.36
+1865,3261,279,5,57,13, Male,Yes,Asian,1580.77
+5381,2680,230,2,53,16, Male,Yes,Caucasian,12449.15
+870,4351,323,2,53,17, Male,Yes,Caucasian,1158.3
+3075,3613,278,4,50,14, Male,Yes,Asian,3849.86
+2623,6645,483,3,53,14,Female,Yes,Asian,4009.52
+2262,6090,442,3,51,15, Male,No,Caucasian,2271.68
+5370,7659,538,2,61,12, Male,Yes,Asian,13155.12
+379,3409,270,2,54,15,Female,Yes,Caucasian,138.66
+1442,4411,326,2,65,14,Female,Yes,Caucasian,2419.62
+5160,905,109,1,50,10, Male,Yes,African American,11417.55
+4559,10673,750,3,58,13, Male,No,Caucasian,9399.27
+1198,7555,547,3,57,14, Male,Yes,Asian,1477.92
+4209,7530,515,1,55,13, Male,Yes,Caucasian,8245.03
+5081,5435,388,2,50,12, Male,No,African American,10647.79
+1524,1671,229,2,53,9,Female,No,African American,2093.19
+557,1568,231,2,53,13, Male,Yes,African American,672.58
+2624,4768,365,4,59,12,Female,No,Caucasian,3197.88
+1937,2168,206,2,53,13, Male,No,African American,2220.53
+2586,5611,411,4,54,12,Female,No,Caucasian,3289.03
+582,2179,167,1,56,13, Male,No,African American,1236.71
+2761,5352,385,4,52,13,Female,Yes,Caucasian,3527.45
+3942,1552,142,1,60,15,Female,No,African American,5941.02
+3912,5429,396,3,59,14,Female,Yes,Caucasian,6134.09
+3393,7114,512,2,49,11, Male,No,Asian,6289.92
+771,1705,230,2,53,17, Male,Yes,Asian,1383.03
+932,2650,222,2,63,14, Male,Yes,Asian,592.81
+4369,1233,131,1,61,10,Female,Yes,African American,7982.68
+5543,4828,369,5,61,16,Female,No,Asian,11599.98
+4801,5443,407,2,58,16, Male,Yes,African American,9967.86
+871,1485,135,1,51,13,Female,No,African American,1777.56
+1867,4697,344,4,47,12, Male,No,Asian,2195.94
+4727,4613,344,5,56,14, Male,Yes,Asian,10415.22
+5600,4159,310,3,58,11, Male,Yes,Asian,13108.73
+5239,1567,142,1,47,16, Male,Yes,African American,12053.66
+2671,5228,377,3,54,18, Male,No,Caucasian,4387.07
+2759,1357,126,1,53,16, Male,No,African American,3998.66
+4066,6135,466,4,64,14, Male,No,Caucasian,6951.12
+3318,4378,339,3,55,14,Female,Yes,Asian,5099.55
+5100,5533,433,5,53,15,Female,Yes,Asian,9364.46
+4147,2646,199,1,56,9, Male,Yes,Asian,7108.51
+426,4673,341,2,58,18, Male,No,Asian,552.68
+2804,5728,435,2,59,13,Female,Yes,African American,2967.08
+1342,1433,125,1,58,14,Female,No,African American,1256.51
+4526,4411,326,2,54,14,Female,Yes,Caucasian,8639.85
+636,4049,296,1,56,14,Female,Yes,Caucasian,1262.26
+2614,3838,296,5,56,12, Male,No,Asian,3673.23
+942,2529,192,1,54,14,Female,Yes,Caucasian,683.28
+2080,6819,505,4,58,11, Male,Yes,Caucasian,2303.08
+2091,1160,126,1,56,10, Male,Yes,African American,2113.39
+4291,1362,143,1,60,15,Female,Yes,African American,6338.04
+2048,5550,406,2,59,15,Female,Yes,Asian,3020.73
+4921,3189,263,3,51,11, Male,No,Asian,11201.51
+5384,2001,189,1,64,12,Female,Yes,African American,11362.12
+1830,5466,413,4,53,16, Male,Yes,Asian,2038.02
+2871,1757,223,2,55,14,Female,No,African American,3904.68
+2078,4270,299,1,52,18,Female,Yes,Caucasian,2582.86
+1513,4263,317,1,53,11, Male,No,Caucasian,2413.99
+4033,3211,265,4,52,15,Female,No,Asian,6465.91
+1186,1924,258,1,58,14,Female,Yes,Asian,1383.56
+4688,7010,494,3,56,16,Female,Yes,Caucasian,7660.42
+4649,1626,224,2,59,10,Female,Yes,African American,7555.77
+5168,4673,341,2,58,16, Male,No,Asian,11753.67
+2783,6819,491,2,55,16,Female,Yes,African American,3323.71
+3836,2525,192,1,58,12, Male,Yes,Caucasian,6628.22
+4344,5289,410,2,50,15,Female,Yes,Caucasian,7514.09
+2441,4569,354,2,55,14, Male,Yes,African American,2848.64
+5390,5619,418,2,52,17,Female,Yes,Caucasian,11171.98
+4546,5673,411,4,61,13,Female,Yes,Asian,6958.5
+597,2330,203,1,46,17,Female,No,African American,1583.03
+4338,2179,167,1,58,12, Male,No,African American,9291.05
+1610,5180,382,3,56,12, Male,Yes,Asian,2168.23
+2447,1829,233,2,60,13, Male,Yes,Caucasian,2485.82
+3883,5435,388,2,54,13, Male,No,African American,6249.62
+2094,10088,730,7,49,17,Female,Yes,Caucasian,2190.33
+3684,4668,341,2,57,12,Female,No,Asian,4842.75
+4529,4763,351,2,58,13,Female,Yes,Asian,8029.84
+1245,1501,150,1,56,18, Male,Yes,African American,1441.64
+5493,3625,289,6,51,10,Female,No,Caucasian,10311.9
+1703,6457,455,2,56,11,Female,Yes,Caucasian,2305.13
+4173,5289,410,2,50,20,Female,Yes,Caucasian,6983.09
+5067,4534,333,2,61,15, Male,No,African American,11141.63
+1376,1647,213,1,60,14,Female,Yes,Caucasian,1892.04
+3137,6442,489,4,58,16, Male,Yes,Caucasian,5078.16
+3296,6784,499,2,65,12,Female,No,African American,4244.01
+1622,1335,138,1,53,10, Male,No,African American,2064.25
+3770,5310,392,2,56,12,Female,No,Caucasian,5218.76
+1703,1389,149,1,52,17,Female,Yes,African American,2181.58
+955,4865,381,5,59,17,Female,No,Caucasian,1375.69
+1416,10088,730,7,59,15,Female,Yes,Caucasian,1362.89
+4472,1829,258,1,59,12, Male,Yes,African American,8301.58
+2893,9113,626,1,64,17, Male,Yes,Asian,4175.96
+658,2101,171,1,47,14, Male,No,Asian,1062.63
+2254,7100,503,2,59,13, Male,No,Caucasian,2680.52
+2225,1786,222,2,53,14,Female,Yes,African American,2624.64
+1656,3250,228,2,59,15, Male,No,Asian,1985.31
+2788,3874,298,3,51,16,Female,Yes,Asian,3251.85
+2857,4712,340,2,54,14, Male,Yes,Caucasian,4611.41
+2078,3536,270,2,60,13,Female,No,African American,2419.27
+3323,4776,378,4,60,13, Male,Yes,Caucasian,4438.47
+3268,4160,320,4,62,11,Female,Yes,Caucasian,3833.34
+2741,5380,420,5,57,10, Male,Yes,Asian,3660.9
+2686,4307,352,2,55,15, Male,Yes,African American,3437.15
+3786,3526,289,3,59,11,Female,No,Caucasian,5078.98
+929,3388,266,4,65,13,Female,Yes,Asian,1703.24
+1862,2278,187,1,56,15, Male,Yes,Caucasian,2511.34
+1484,3189,263,3,54,14, Male,No,Asian,1832.91
+4628,4100,307,3,54,15, Male,Yes,Caucasian,8887.39
+1841,5395,392,3,48,15, Male,Yes,Caucasian,2223.13
+2323,5096,380,2,58,17, Male,Yes,Caucasian,2359.31
+1540,7582,531,2,57,13, Male,No,Caucasian,1723.97
+4843,2532,205,1,60,17, Male,Yes,Asian,10178.37
+667,4941,366,1,54,15, Male,Yes,Caucasian,510.08
+718,3807,301,4,60,8,Female,Yes,Asian,518.98
+1589,5289,410,2,58,13,Female,Yes,Caucasian,2055.31
+1202,1568,162,1,59,12, Male,Yes,African American,1281.1
+4586,5466,413,4,63,11, Male,Yes,Asian,9555.1
+1110,7569,564,3,59,14,Female,Yes,Caucasian,1240.09
+1574,8047,569,4,63,14, Male,No,Caucasian,1944.28
+455,3326,268,4,51,14, Male,No,Caucasian,159.29
+5454,4964,365,1,56,7,Female,Yes,Caucasian,10409.61
+2722,8603,621,3,55,14,Female,No,Caucasian,3564.57
+5472,5303,377,1,58,15, Male,No,Caucasian,12974.95
+2860,2880,214,2,54,10, Male,No,African American,3663.11
+638,1134,128,1,59,10, Male,Yes,African American,356.73
+3162,8244,579,3,53,17, Male,Yes,Asian,4471.06
+2136,3780,230,2,54,13,Female,Yes,Asian,2448.05
+1355,2430,191,1,53,15,Female,Yes,Asian,1524.71
+3524,2959,231,2,50,17,Female,No,African American,5186.46
+988,7659,538,2,56,9, Male,Yes,African American,1246.49
+1517,4229,337,3,57,13,Female,Yes,Caucasian,2393.01
+1263,4471,344,3,62,14, Male,Yes,Asian,1755.46
+4381,10278,707,1,48,11, Male,No,Asian,9658.32
+1488,3000,235,2,53,13, Male,No,Asian,1466.9
+1084,6827,482,2,56,15,Female,No,Caucasian,1854.26
+468,2762,215,3,58,15, Male,No,Asian,817.51
+1905,5309,397,3,62,16, Male,No,Asian,1371.79
+1063,7582,531,2,54,10, Male,No,Caucasian,1129.86
+3630,5245,383,2,61,15, Male,No,Asian,6097.21
+5288,1852,243,1,52,11,Female,No,African American,9432.72
+1056,1870,221,1,54,16, Male,No,African American,1627.69
+4914,4336,339,1,58,14, Male,Yes,Caucasian,11786.04
+2535,5443,407,2,60,16, Male,Yes,African American,3020.97
+3059,6196,450,6,63,16,Female,No,Caucasian,3929.48
+2464,2450,180,1,47,14, Male,No,Caucasian,3880.73
+2546,3271,250,2,55,15,Female,Yes,Asian,3358.6
+550,3673,297,3,56,15,Female,Yes,Caucasian,1035.93
+1735,8760,633,5,56,12,Female,No,African American,2371.7
+2544,3461,279,3,54,15, Male,Yes,African American,3374.21
+3338,4049,296,1,54,14,Female,Yes,Caucasian,4998.46
+2619,3690,299,2,56,14, Male,No,Caucasian,2860.9
+3407,2860,235,2,55,15,Female,No,Asian,5153.53
+3387,5835,452,3,48,9,Female,Yes,Asian,5440
+3370,1402,132,1,56,15,Female,Yes,African American,4389.92
+5224,6819,491,2,59,16,Female,Yes,African American,9531.12
+766,3089,254,2,57,11,Female,No,Caucasian,1130.16
+4625,4307,352,4,60,16, Male,Yes,Asian,9347.82
+787,6135,466,4,56,14, Male,No,Caucasian,262.85
+3671,3388,224,2,52,16,Female,No,African American,4960.42
+4509,2252,205,1,51,13, Male,Yes,Asian,9841.88
+4654,1870,260,1,52,16, Male,No,African American,10542.02
+3559,1924,232,1,45,9,Female,Yes,Asian,5092.19
+1275,4831,353,3,50,14,Female,Yes,Caucasian,1728.28
+4472,2558,220,2,58,14,Female,No,Caucasian,7356.82
+1308,6045,459,2,52,16,Female,Yes,African American,986.47
+880,5319,377,2,52,17,Female,No,African American,741.45
+1821,3526,289,3,63,14,Female,No,Caucasian,1548.5
+3185,1501,150,1,57,16, Male,Yes,African American,5158.14
+2270,2586,229,2,55,19, Male,Yes,African American,2896.37
+1445,3480,281,2,57,13, Male,Yes,Caucasian,1949.77
+2816,4221,304,2,63,16, Male,No,African American,3612.05
+218,3510,225,2,63,15,Female,Yes,Asian,417.48
+2010,3500,228,2,56,16,Female,No,African American,3046.97
+635,2748,228,2,60,16, Male,Yes,Caucasian,208.55
+4141,7402,538,2,57,14,Female,Yes,Asian,7319.2
+3667,3526,289,3,58,13,Female,No,Caucasian,4785.64
+3886,3954,318,4,55,14, Male,Yes,Caucasian,7330.02
+1398,1410,137,1,62,16, Male,No,African American,2221.97
+2087,4159,310,3,58,15, Male,Yes,Asian,1907.14
+1544,5227,386,6,62,13, Male,Yes,Caucasian,1380.56
+2958,4171,321,5,55,11,Female,Yes,Caucasian,4168.9
+2074,10384,728,3,60,16, Male,No,Caucasian,2956.41
+3665,7100,503,2,57,18, Male,No,Caucasian,6153.57
+1613,2963,241,2,58,14,Female,No,African American,2152.76
+3990,1924,230,1,56,15,Female,Yes,Asian,6151.87
+2006,1757,231,2,59,19,Female,No,African American,2424.28
+3268,2860,235,2,62,17,Female,No,Asian,4811.52
+1278,4336,339,1,53,12, Male,Yes,Caucasian,2168.75
+1849,5110,371,3,61,11,Female,Yes,Caucasian,2151.98
+3309,2860,214,1,55,11, Male,Yes,Caucasian,6070.18
+1658,4706,353,6,50,16, Male,No,Asian,1307.74
+4656,3625,289,6,57,16,Female,No,Caucasian,7714.35
+2489,3409,270,2,54,16,Female,Yes,Caucasian,2149.83
+3718,3977,304,2,60,13,Female,No,African American,6463.65
+5437,5309,397,3,46,17, Male,No,Caucasian,12019.41
+4922,6827,482,2,58,15,Female,No,Caucasian,9631.49
+4453,1499,138,1,60,12,Female,Yes,African American,7182.91
+983,1349,142,1,54,11, Male,No,African American,1665.41
+4820,6396,485,3,59,15,Female,Yes,Caucasian,9263.84
+2317,8029,574,2,50,11, Male,Yes,Caucasian,3650.43
+4685,2525,200,1,54,12,Female,Yes,African American,8294.79
+2860,6127,433,1,60,17, Male,Yes,Caucasian,4755.07
+2490,6827,482,2,62,14,Female,No,Caucasian,3656.32
+383,4896,387,2,59,12,Female,No,African American,986.03
+3294,5274,387,3,56,12,Female,Yes,Asian,4339.5
+865,2493,186,1,61,17, Male,Yes,Asian,1087.13
+696,10278,707,1,57,16, Male,No,Asian,1481.15
+1399,1337,118,1,53,11, Male,Yes,African American,2027.9
+2921,2120,181,1,60,16, Male,Yes,African American,5014.24
+455,3351,262,2,49,14,Female,Yes,Asian,1269.76
+2674,6045,459,2,49,16,Female,Yes,African American,2741.05
+3184,7569,564,3,62,15,Female,Yes,Caucasian,4177.91
+5214,4612,344,3,57,15, Male,No,Caucasian,11386.03
+384,2561,215,2,59,11, Male,Yes,Caucasian,177.5
+1098,1349,142,1,59,11, Male,No,African American,1747.34
+3153,6378,458,1,60,16,Female,No,Caucasian,4836.73
+881,7499,560,5,55,17,Female,No,Caucasian,1297.02
+3934,2906,232,2,54,15, Male,No,Caucasian,7518.07
+2396,2646,199,1,55,16, Male,Yes,Asian,2398.52
+838,3089,254,2,58,14,Female,No,Caucasian,1170.6
+4749,5728,435,3,59,11,Female,Yes,Asian,7554.83
+2792,6982,518,2,65,12,Female,Yes,Caucasian,4158.8
+2637,3293,251,2,54,18, Male,No,Caucasian,4047.16
+5026,3969,301,2,61,16, Male,Yes,African American,10560.24
+4074,5673,411,4,59,15,Female,Yes,Asian,5640.9
+1562,1671,225,2,58,13,Female,No,African American,2097.06
+836,2910,236,2,57,13,Female,Yes,Caucasian,1357.36
+3544,9504,681,3,57,18,Female,No,Asian,4537.98
+5098,3690,299,2,55,17, Male,No,Caucasian,10683.23
+1138,8100,581,2,49,12,Female,Yes,Caucasian,1372.83
+441,7582,531,2,52,13, Male,No,Caucasian,665.74
+4074,10230,721,3,62,16, Male,Yes,Caucasian,8352.14
+1608,6645,483,3,50,17,Female,Yes,Asian,2513.17
+2428,3850,229,2,46,14,Female,Yes,Caucasian,2935.61
+207,3326,268,4,54,16, Male,Yes,Caucasian,94.81
+5213,5495,409,1,50,11, Male,No,Caucasian,11347.22
+4994,7416,549,3,59,12, Male,No,Asian,12028.25
+1660,3683,287,2,57,14, Male,No,African American,1582.63
+249,3500,230,2,51,14,Female,Yes,African American,1432.13
+811,3254,253,2,54,18,Female,No,Asian,650.95
+1194,5565,410,4,56,13,Female,Yes,Caucasian,1380.38
+2045,4431,320,2,52,14, Male,Yes,Caucasian,2358.12
+2148,3762,287,3,56,14, Male,Yes,Caucasian,2987.66
+4293,5137,387,3,48,14, Male,No,African American,8335.4
+2396,5140,374,1,56,15, Male,Yes,Caucasian,3436.62
+3450,4866,347,1,54,14,Female,No,Caucasian,4210.15
+2518,3899,300,4,51,16, Male,No,Caucasian,2281.61
+4390,3254,253,2,57,16,Female,No,Asian,6622.2
+4750,5758,410,4,63,13, Male,No,Caucasian,9331.4
+5164,3976,291,2,59,14, Male,Yes,Caucasian,11697.5
+5437,4742,372,7,59,15,Female,Yes,Asian,11390.32
+3029,6827,482,2,45,8,Female,No,Caucasian,4671.77
+3266,4896,387,3,53,13,Female,No,Caucasian,4634.42
+352,4613,344,5,59,10, Male,Yes,Asian,772.46
+2365,6378,458,1,55,14,Female,No,Caucasian,3408.26
+5495,4543,329,2,49,12, Male,No,Asian,13933.7
+4085,2963,241,2,65,18,Female,No,African American,6889.37
+2978,5096,380,2,63,16, Male,Yes,Caucasian,3840.93
+1282,5013,379,3,59,13,Female,Yes,Caucasian,1308.2
+2816,4431,320,2,60,14, Male,Yes,Caucasian,3929.2
+1975,3965,292,2,55,11,Female,Yes,Asian,1865.6
+3598,5380,420,5,59,15, Male,Yes,Asian,5887.36
+1989,1829,232,2,52,14, Male,Yes,African American,1593.18
+4628,2450,246,1,52,13,Female,No,African American,8508.09
+1452,7499,560,5,49,13,Female,No,Caucasian,1852.82
+2970,5767,431,4,60,17, Male,Yes,Asian,3929.06
+3032,7818,584,4,60,13, Male,Yes,Caucasian,4021.39
+2524,3922,299,2,43,12,Female,Yes,Caucasian,3754.34
+4147,3613,278,4,50,11, Male,Yes,Asian,7029.66
+821,5441,394,1,56,12, Male,Yes,Caucasian,374.11
+2673,3933,287,4,54,13, Male,Yes,Asian,3531.05
+4163,5340,376,4,54,11, Male,Yes,Caucasian,9115.03
+3291,6645,483,3,61,15,Female,Yes,Asian,5363.92
+5095,7100,503,2,57,17, Male,No,Caucasian,11314.26
+481,3326,268,4,55,15, Male,No,Caucasian,172.04
+2590,2937,223,2,52,17,Female,Yes,African American,3903.61
+254,2047,167,1,50,13, Male,Yes,Caucasian,588.79
+4556,11589,805,1,54,15,Female,Yes,Caucasian,8130.07
+4720,5179,398,2,56,10, Male,Yes,African American,9355.48
+1445,5051,372,2,61,12,Female,Yes,African American,2063.14
+4801,3899,300,4,54,14, Male,No,Asian,9148.48
+1216,3720,228,2,58,13,Female,Yes,Caucasian,1431.78
+3834,5101,382,3,56,15,Female,No,African American,6195.6
+704,2327,178,1,53,16,Female,Yes,Caucasian,766.94
+346,4756,351,2,62,14,Female,Yes,Caucasian,1126.88
+4330,4221,304,2,55,14, Male,No,African American,8171.67
+1780,3235,268,5,50,13, Male,Yes,Asian,2224.09
+4891,5096,380,2,48,15, Male,Yes,Caucasian,10027.48
+5213,6922,511,1,46,13, Male,Yes,Caucasian,11784.12
+4999,6819,505,4,60,13, Male,Yes,Caucasian,11022.31
+3435,2539,188,1,52,15, Male,Yes,Asian,5378.05
+2745,3461,264,4,52,12, Male,Yes,Caucasian,3429.78
+478,3838,296,5,57,12, Male,No,Asian,722.56
+4640,7760,538,3,55,13,Female,No,African American,8884
+1120,3480,233,2,56,12,Female,No,Caucasian,1949.85
+4673,5343,383,2,53,14, Male,Yes,Asian,9525.91
+5471,5524,415,5,54,14,Female,No,Asian,10783.99
+2068,2539,188,1,58,14, Male,Yes,Asian,2153.7
+1629,2959,231,2,63,13,Female,No,African American,1929.5
+5006,6481,462,2,60,11,Female,Yes,Caucasian,9499.05
+1828,5199,401,4,49,14, Male,Yes,Asian,1115.76
+5023,3977,304,2,49,13,Female,No,African American,10187.27
+4198,5533,433,5,51,16,Female,Yes,Asian,6654.36
+3013,6457,455,2,61,14,Female,Yes,Caucasian,4418.52
+1015,1349,142,1,58,11, Male,No,African American,1708.61
+4640,2278,187,1,53,13, Male,Yes,Caucasian,10180.58
+5198,5395,392,3,54,9, Male,Yes,Caucasian,12240
+5472,3484,282,6,58,13, Male,No,Caucasian,12652.47
+5378,5222,370,4,60,12,Female,No,Caucasian,10994.42
+3108,4116,314,2,61,16,Female,No,Asian,4459.53
+2759,6257,445,1,56,15, Male,Yes,Asian,3216.34
+2276,5199,401,4,44,15, Male,Yes,Asian,1868.86
+404,2832,249,2,58,15, Male,No,Caucasian,507.06
+4435,11300,825,7,57,9,Female,Yes,Asian,7794.25
+363,5759,440,3,51,11,Female,No,Caucasian,362.49
+4839,6196,450,6,62,14,Female,No,Caucasian,8439.61
+3459,3557,263,1,53,9,Female,Yes,Asian,4450.2
+4611,4431,320,2,56,11, Male,Yes,Caucasian,9435.74
+2470,3965,292,2,57,16,Female,Yes,Asian,2523.56
+2649,3230,224,2,54,12, Male,Yes,Caucasian,3282.3
+3908,3300,266,5,49,13,Female,No,Caucasian,6292.23
+4809,2906,232,2,60,14, Male,No,Caucasian,10736.03
+5296,4351,323,2,51,15, Male,Yes,Caucasian,12748.6
+4789,2832,249,2,53,13, Male,No,Caucasian,10149.86
+4516,3806,309,2,60,14, Male,No,African American,9149.58
+4521,4632,355,1,57,16, Male,Yes,Caucasian,9284.39
+493,5441,394,1,52,16, Male,Yes,Caucasian,202.5
+2754,3977,304,2,56,12,Female,No,African American,4382.91
+2327,4378,339,3,59,15,Female,Yes,Asian,3203.53
+3107,1774,243,1,59,15,Female,No,African American,4663.08
+465,8494,607,5,54,14, Male,No,Caucasian,343.8
+3830,4668,341,2,53,17,Female,No,Asian,5162.35
+4143,2120,184,1,53,11,Female,No,Caucasian,5688.81
+4518,3976,291,2,55,16, Male,Yes,Caucasian,9101.8
+1868,1337,134,1,59,11, Male,Yes,African American,2739.05
+3791,7818,584,4,52,14, Male,Yes,Caucasian,6234.94
+3144,5140,374,1,64,13, Male,Yes,Caucasian,5186.81
+5121,2430,191,1,51,17,Female,Yes,Asian,9412.32
+3521,4673,341,2,57,18, Male,No,Asian,5809.82
+4324,2120,184,1,58,14,Female,No,Caucasian,6185.79
+3275,855,172,1,60,10, Male,Yes,African American,4589.04
+4261,7506,536,2,54,13,Female,Yes,Asian,7193.11
+1098,3673,297,3,59,14,Female,Yes,Caucasian,1379.28
+1244,3461,264,4,55,13, Male,Yes,Caucasian,914.71
+3600,1134,139,1,58,10, Male,Yes,African American,6655.58
+3700,4897,357,2,50,17, Male,Yes,Caucasian,6871.62
+1377,2923,232,2,54,13, Male,Yes,African American,832.85
+2938,4543,329,2,52,13, Male,No,Asian,4918.08
+2026,2531,195,1,60,15,Female,Yes,Caucasian,1931.38
+2251,3100,230,2,61,10, Male,No,Asian,2394.53
+1875,1311,138,1,55,10, Male,No,African American,2535.46
+1192,2021,167,1,52,9, Male,No,Asian,1217.86
+204,3806,309,2,56,16, Male,Yes,African American,412.73
+392,2252,205,1,51,10, Male,Yes,Asian,1101.41
+4728,3000,235,2,50,9, Male,No,Asian,9989.09
+1967,3411,223,2,56,11,Female,No,Caucasian,2671.62
+3706,3907,296,3,59,13, Male,Yes,Caucasian,6144.87
+1075,3922,299,2,47,12,Female,Yes,Caucasian,1907.76
+4371,5758,410,4,53,14, Male,No,Caucasian,7943.41
+2842,7416,549,3,57,14, Male,No,Asian,4822.49
+4392,2525,200,1,52,15,Female,Yes,African American,7376.59
+2605,5101,382,3,62,14,Female,No,African American,3546.76
+2350,5101,382,3,55,13,Female,No,African American,3121.28
+4340,2308,196,1,55,15, Male,No,Asian,7643.97
+682,5352,385,4,57,13,Female,Yes,Caucasian,1024.33
+1857,4391,316,2,61,17,Female,No,Caucasian,1461.62
+1548,3782,293,2,57,14,Female,No,Caucasian,1651.64
+1584,2880,214,2,54,15, Male,No,African American,1273.38
+4842,1300,124,1,60,10,Female,No,African American,9319.62
+1661,3160,228,2,50,15, Male,No,Asian,1394.54
+2517,3536,270,2,57,13,Female,No,African American,3089.08
+312,3155,235,2,50,18, Male,Yes,Caucasian,124.24
+2802,2168,206,1,57,9, Male,No,African American,4106.19
+524,6982,518,2,54,15,Female,Yes,Caucasian,1414.57
+3890,2733,210,1,57,12, Male,Yes,Asian,6898.19
+3469,6384,448,1,58,13,Female,Yes,Asian,4177.14
+3759,1870,254,1,55,13, Male,No,African American,7431.63
+4987,3450,231,2,53,11,Female,Yes,Caucasian,8689.91
+937,5382,367,1,57,13, Male,No,Asian,1208.1
+5431,5145,389,3,53,16,Female,Yes,Asian,11011.81
+800,5198,364,2,54,14,Female,No,Asian,932.19
+4833,5180,382,3,59,18, Male,Yes,Asian,11112.65
+3892,7838,563,2,57,14,Female,No,Caucasian,5802.14
+4718,5765,437,3,53,10,Female,No,Asian,8184.84
+2458,6090,442,3,56,13, Male,No,Caucasian,2679.7
+3086,6637,491,4,63,10, Male,Yes,Caucasian,4265.37
+5567,5294,390,4,61,14,Female,No,Caucasian,11930.53
+581,6662,508,3,62,12,Female,No,Asian,1300.85
+1852,7518,543,2,62,16,Female,No,African American,1929.12
+5524,4534,333,2,54,14, Male,No,African American,13148.84
+3400,2680,225,2,49,13,Female,Yes,Caucasian,4351.87
+478,2021,167,1,58,14, Male,No,Asian,589.99
+2729,8244,579,3,53,15, Male,Yes,African American,3361.59
+1427,4471,344,3,54,14, Male,Yes,Asian,1895
+2467,7838,563,2,60,11,Female,No,Caucasian,2844.37
+1630,5614,430,3,57,17,Female,Yes,Caucasian,1721.36
+4355,2820,219,1,60,12,Female,Yes,Asian,6521.83
+416,9704,694,4,52,13,Female,Yes,Asian,547.5
+5199,7518,543,3,55,15,Female,No,African American,9511.89
+1720,5429,396,3,58,12,Female,Yes,Caucasian,2044.16
+1443,2150,173,1,52,11, Male,No,Caucasian,2088.72
+5148,3449,288,3,51,16,Female,Yes,Caucasian,8989.09
+3150,6179,459,4,57,16,Female,Yes,Caucasian,3730.69
+4779,1160,126,1,54,10, Male,Yes,African American,9699.58
+2188,3580,226,2,52,15,Female,Yes,Asian,2175.82
+4193,3838,296,5,56,15, Male,No,Asian,8206.82
+3858,3480,281,2,52,14, Male,Yes,Caucasian,7496.47
+1065,1671,227,2,60,17,Female,No,Asian,1630.21
+5409,6340,448,1,53,14, Male,Yes,Caucasian,12366.9
+1916,5666,413,4,58,17,Female,Yes,Caucasian,1832.65
+4751,6378,458,1,52,14,Female,No,Caucasian,8997.2
+1625,5274,387,3,60,15,Female,Yes,Asian,1668.95
+3477,2531,195,1,53,14,Female,Yes,Caucasian,4507.49
+2611,3954,318,4,56,15, Male,Yes,Caucasian,3869.43
+5371,2531,195,1,56,13,Female,Yes,Caucasian,9781.01
+1430,3965,292,2,59,17,Female,Yes,Asian,1195.8
+3728,906,103,1,54,10, Male,Yes,African American,5968.82
+1248,2998,251,2,56,14, Male,No,Caucasian,1826.09
+1755,5149,388,5,61,13, Male,Yes,Asian,1300.35
+2875,2860,214,1,54,12, Male,Yes,Caucasian,4898.42
+724,10748,754,2,52,18, Male,No,Caucasian,1209.02
+2281,5308,394,1,56,10,Female,Yes,Asian,2674.8
+4847,3806,309,2,61,14, Male,No,African American,10394.44
+5319,6645,483,3,52,14,Female,Yes,Asian,11101.21
+2045,6784,499,2,57,13,Female,No,African American,2063.03
+4595,2780,223,2,48,16,Female,Yes,Caucasian,7460.65
+1465,8603,621,3,54,13,Female,No,Caucasian,1738.22
+2694,2832,249,2,64,16, Male,No,Caucasian,3636.99
+4804,7760,538,3,56,13,Female,No,African American,9357.29
+901,4171,321,5,55,14,Female,Yes,Caucasian,1385.4
+1845,7167,515,2,60,16,Female,No,Asian,1833.37
+2689,6819,491,2,57,16,Female,Yes,African American,3202.38
+2428,3683,287,2,61,15, Male,No,African American,2960.26
+3104,6033,449,4,57,12, Male,Yes,Caucasian,4847.04
+1383,1485,137,1,64,14,Female,No,African American,2227.78
+1623,5228,377,3,55,10, Male,No,Caucasian,2332.65
+2910,3155,235,2,55,14, Male,Yes,Caucasian,3691.17
+2376,3271,250,2,55,18,Female,Yes,Asian,3082.16
+3919,5390,418,4,55,17,Female,Yes,Caucasian,5636.55
+624,7140,507,2,48,13, Male,Yes,Asian,434.97
+2559,3461,264,4,58,15, Male,Yes,Caucasian,3056.29
+3496,5184,383,4,52,13, Male,Yes,Asian,5856.46
+1358,4116,314,2,51,16,Female,No,Asian,1792.87
+255,3520,229,2,56,6,Female,Yes,Caucasian,1099.91
+638,7555,547,3,53,14, Male,Yes,Asian,963.68
+644,6982,518,2,57,15,Female,Yes,Caucasian,1471.41
+2187,2863,223,2,53,15, Male,Yes,Asian,3033.94
+4717,3673,297,3,49,12,Female,Yes,Caucasian,8265.47
+1148,4640,332,2,61,17, Male,No,Asian,470.36
+2982,4569,354,4,58,15, Male,Yes,Asian,4078.66
+1462,2860,214,1,57,12, Male,Yes,Caucasian,2194.01
+970,3300,266,5,54,14,Female,No,Caucasian,1418.49
+4493,7685,534,2,54,12,Female,Yes,Asian,8294.09
+554,3461,279,3,55,13, Male,Yes,African American,612.19
+3263,2073,175,1,60,12,Female,Yes,Caucasian,5027.68
+1654,2748,228,2,53,13, Male,Yes,Caucasian,1267.91
+1160,5614,430,3,61,15,Female,Yes,Caucasian,1281.84
+2326,8494,607,5,51,16, Male,No,Caucasian,2620.1
+1569,4745,339,2,52,17, Male,Yes,African American,1595.6
+1429,9156,642,2,52,15,Female,Yes,Asian,2437.53
+5082,4160,320,4,56,12,Female,Yes,Caucasian,8574.72
+5408,5319,377,3,59,14,Female,No,Asian,9751.55
+2163,9824,685,3,51,14, Male,Yes,Asian,2875.9
+2245,6982,518,2,58,18,Female,Yes,Caucasian,3173.47
+4862,5182,402,3,55,16, Male,Yes,Asian,10362.23
+322,1389,149,1,56,15,Female,Yes,African American,1061.66
+4358,7871,564,3,65,15, Male,Yes,Caucasian,8603.12
+4532,4712,340,2,50,13, Male,Yes,Caucasian,9842.65
+944,886,197,1,50,10, Male,Yes,African American,710.41
+1011,3484,282,6,50,15, Male,No,Caucasian,534.5
+3166,1389,149,1,53,13,Female,Yes,African American,4582.62
+274,2586,229,2,58,15, Male,Yes,African American,598.22
+782,3613,278,4,56,12, Male,Yes,Asian,44.36
+3177,3098,272,4,54,16, Male,Yes,Caucasian,4988.81
+298,10578,747,3,50,11,Female,Yes,Asian,1451.84
+5269,7582,531,2,59,18, Male,No,Caucasian,12403.39
+4006,8244,579,3,56,15, Male,Yes,Asian,6994.63
+2917,6617,460,1,61,15,Female,Yes,Caucasian,3856.73
+3080,3584,294,5,55,14, Male,Yes,Asian,4888.86
+5295,2001,189,1,53,17,Female,Yes,African American,11005.89
+1302,1757,229,2,48,14,Female,No,African American,1632.84
+1270,3557,263,2,60,14,Female,Yes,Asian,1061.35
+389,5274,387,3,63,13,Female,Yes,Asian,752.35
+1819,4381,321,3,50,12, Male,Yes,Asian,2518.48
+1342,3683,287,2,55,12, Male,No,African American,1115.51
+4942,9272,656,2,56,12, Male,No,African American,11358.71
+421,5619,418,2,54,17,Female,Yes,Caucasian,1400.7
+231,2910,236,2,47,11,Female,Yes,Caucasian,1041.54
+4363,5140,370,1,62,15,Female,Yes,Caucasian,7132.24
+3039,3180,224,2,58,13, Male,Yes,Caucasian,3907.32
+1867,1160,126,1,53,10, Male,Yes,African American,2772.34
+1734,2525,192,1,58,15, Male,Yes,Caucasian,1648.75
+2840,5614,430,3,49,14,Female,Yes,Caucasian,3521.58
+2812,6922,511,1,63,16, Male,Yes,Caucasian,3772.41
+209,6617,460,1,64,11,Female,Yes,Caucasian,890.52
+2382,6033,449,4,58,11, Male,Yes,Caucasian,3149
+393,4543,329,2,59,11, Male,No,Asian,1057.54
+5155,3782,293,2,50,12,Female,No,Caucasian,9427.46
+4604,5096,380,2,61,14, Male,Yes,Caucasian,8890.28
+2518,3714,286,2,50,16,Female,Yes,African American,3701.82
+2012,9156,642,2,56,13,Female,Yes,African American,3194.37
+5475,2539,188,1,56,11, Male,Yes,Asian,12819.61
+579,3746,280,2,57,13,Female,Yes,Caucasian,867.97
+1060,3089,254,2,47,11,Female,No,Caucasian,1306.6
+4227,5495,409,1,56,14, Male,No,Caucasian,7497.15
+2362,4673,341,2,51,15, Male,No,Asian,2910.6
+279,3476,231,2,56,14,Female,Yes,Caucasian,805.45
+2276,6637,491,4,48,16, Male,Yes,Caucasian,2386.59
+492,4284,338,5,57,14,Female,Yes,Caucasian,1295.57
+1902,4640,332,2,53,15, Male,No,Asian,1449.69
+2561,5829,427,2,59,11,Female,Yes,African American,3721.29
+714,3560,233,2,52,12, Male,Yes,Caucasian,482.84
+2593,3182,222,2,49,17,Female,Yes,Caucasian,3428.68
+1331,3235,268,5,62,14, Male,Yes,Asian,1566.25
+1135,7871,564,3,56,15, Male,Yes,Caucasian,1117.24
+3840,2890,223,2,57,14, Male,No,Caucasian,6408.84
+1625,6662,468,3,53,14,Female,Yes,Caucasian,1598.35
+637,5521,406,2,63,17,Female,Yes,Caucasian,1424.48
+2440,5101,382,3,51,13,Female,No,African American,3300.07
+2375,3254,253,2,49,16,Female,No,Asian,2375.45
+632,7871,564,3,55,19, Male,Yes,Caucasian,651.96
+1208,5441,394,1,53,15, Male,Yes,Caucasian,690.43
+845,4381,321,3,53,12, Male,Yes,Asian,1309.65
+4737,3000,235,2,60,9, Male,No,Asian,10024.61
+4019,2021,167,1,52,15, Male,No,Asian,7505.15
+5178,2923,232,2,57,13, Male,Yes,African American,11118.62
+1478,3878,321,8,47,12, Male,No,Caucasian,392.82
+2944,6922,511,1,64,13, Male,Yes,Caucasian,4132.49
+2579,5140,374,1,57,10, Male,Yes,Caucasian,3830.18
+1608,1233,133,1,60,10,Female,Yes,African American,1812.65
+4545,2525,200,1,49,16,Female,Yes,African American,7896.41
+1325,4381,321,3,59,16, Male,Yes,Asian,1848.08
+4432,2880,214,2,65,17, Male,No,African American,8388.55
+1874,3746,280,2,58,14,Female,Yes,Caucasian,2037.74
+520,2561,215,2,61,8, Male,Yes,Caucasian,245.73
+2734,1705,232,2,64,14, Male,Yes,African American,4496.1
+1448,7569,564,3,56,14,Female,Yes,Caucasian,1507.63
+3124,6045,459,2,61,16,Female,Yes,African American,3614.12
+2134,3606,283,2,58,18, Male,Yes,Caucasian,1962.58
+2644,2450,180,1,56,12, Male,No,Caucasian,4295.74
+3498,5728,435,3,57,12,Female,Yes,Asian,4295.48
+5435,5884,438,4,55,12, Male,No,Caucasian,13249.04
+2066,3235,268,5,55,12, Male,Yes,Asian,2674.49
+4291,2101,171,1,52,9, Male,No,Asian,8813.8
+682,2430,191,1,53,13,Female,Yes,Asian,1043.94
+1867,2762,215,3,53,16, Male,No,Asian,2323.94
+1785,5294,390,4,62,15,Female,No,Caucasian,2644.45
+2847,2733,210,1,58,13, Male,Yes,Asian,3934.96
+3657,4706,353,6,60,13, Male,No,Asian,5791.42
+1155,3969,301,2,61,16, Male,Yes,African American,713.65
+2731,6207,451,4,54,15, Male,No,Caucasian,3204.79
+2795,3274,282,9,56,15, Male,Yes,Caucasian,3453.12
+799,7402,538,2,58,13,Female,Yes,Asian,1654.71
+5403,3690,299,2,55,15, Male,No,Caucasian,12019.72
+1342,4613,344,5,58,8, Male,Yes,Asian,1614.56
+2573,5524,415,5,56,16,Female,No,Asian,3253.04
+2668,4986,369,2,60,14, Male,Yes,Asian,3128.34
+3055,5110,371,3,61,16,Female,Yes,Caucasian,4135.25
+4465,3327,253,2,54,14,Female,No,African American,7479.95
+471,2150,173,1,57,9, Male,No,Caucasian,1214.92
+1795,2672,204,1,55,8,Female,No,African American,2540.68
+3961,2433,190,1,51,15,Female,No,Caucasian,6702.87
+3470,5183,376,3,61,14, Male,Yes,Asian,5582.86
+5351,8100,581,2,50,12,Female,Yes,Caucasian,10221.19
+2887,5140,370,1,52,13,Female,Yes,Caucasian,3763.63
+2688,7871,564,3,55,12, Male,Yes,Caucasian,3666.99
+5422,5565,410,4,58,15,Female,Yes,Caucasian,10362.06
+5518,6045,459,2,56,13,Female,Yes,African American,10050.07
+1677,3388,259,2,54,16,Female,No,African American,1477.97
+2406,3873,292,1,57,16,Female,Yes,Asian,2819.66
+1954,7167,515,2,61,9,Female,No,African American,1967.59
+3248,3075,245,2,55,12,Female,No,African American,4309.53
+217,9113,626,1,63,15, Male,Yes,Asian,535.49
+5553,6040,456,3,56,12, Male,Yes,Caucasian,13283.17
+4965,7075,514,4,59,14, Male,No,Asian,11233.99
+234,5043,376,2,59,17,Female,Yes,Asian,1107.51
+1836,8029,574,2,49,13, Male,Yes,Caucasian,2697.13
+4613,8157,599,2,60,14, Male,Yes,Caucasian,10466.66
+2966,3899,300,4,59,15, Male,No,Asian,3310.83
+3687,7685,534,2,54,10,Female,Yes,Asian,6132.48
+1466,5443,407,2,55,14, Male,Yes,African American,1170.45
+2722,5466,413,4,57,9, Male,Yes,Asian,3758.64
+1401,3714,286,2,48,16,Female,Yes,African American,2131.73
+709,5228,377,3,63,15, Male,No,Caucasian,1328.27
+4142,8047,569,4,62,18, Male,No,Caucasian,8235.09
+5161,5289,410,2,53,17,Female,Yes,Caucasian,9923.72
+1404,886,132,1,55,10, Male,Yes,African American,1079.09
+2544,2000,233,1,50,17,Female,Yes,African American,3178.18
+2810,4229,337,3,60,13,Female,Yes,Caucasian,4387.61
+4895,4897,357,2,60,14, Male,Yes,Caucasian,11245.5
+5430,7398,517,2,61,16, Male,Yes,African American,13458.53
+4393,5384,398,2,58,15,Female,Yes,Asian,7925.63
+4336,3613,278,4,57,12, Male,Yes,Asian,7713.09
+3233,7659,538,2,58,13, Male,Yes,African American,5403.95
+1659,2631,213,1,58,17, Male,Yes,African American,1932.1
+2540,2493,186,1,58,19, Male,Yes,Asian,3617.43
+5287,1337,124,1,56,11, Male,Yes,African American,13079.7
+4721,2073,175,1,48,16,Female,Yes,Caucasian,8790.16
+5466,9504,681,3,55,14,Female,No,Asian,9977.04
+3539,4756,351,2,61,17,Female,Yes,Caucasian,5455.14
+1567,4049,296,1,59,14,Female,Yes,Caucasian,2060.24
+4567,1233,129,1,60,10,Female,Yes,African American,7742.81
+1447,5640,398,3,55,12,Female,No,Asian,1773.27
+4590,9560,701,3,48,16,Female,No,Asian,7873.12
+1392,3807,301,4,52,14,Female,Yes,Asian,1010.63
+3688,5303,377,1,54,18, Male,No,Caucasian,6244.13
+2090,2101,171,1,56,12, Male,No,Asian,2880.14
+1965,6637,491,4,56,14, Male,Yes,Caucasian,1793.53
+2271,1561,226,2,51,15,Female,Yes,African American,3115.94
+1524,3821,281,4,57,12,Female,Yes,Asian,1726.19
+1017,10578,747,3,55,15,Female,Yes,Asian,1849.39
+822,6922,511,1,51,12, Male,Yes,Caucasian,646.89
+2693,6754,483,2,59,15, Male,Yes,Caucasian,3054.07
+4086,3411,232,2,50,15,Female,No,Caucasian,6903.83
+5512,3683,287,2,49,10, Male,No,African American,13157.12
+5546,8494,607,5,54,11, Male,No,Caucasian,13106.02
+3040,4090,335,3,57,13,Female,Yes,Asian,3432.41
+882,3206,243,2,68,13,Female,Yes,Caucasian,1307.02
+2137,5833,433,3,60,17,Female,Yes,Asian,1983.54
+781,3907,296,3,57,13, Male,Yes,Caucasian,545.6
+5007,4090,335,3,53,17,Female,Yes,Asian,8379
+2797,3085,217,1,62,13, Male,No,Caucasian,3657.32
+602,4270,299,1,56,9,Female,Yes,Caucasian,1073.62
+1153,5767,431,4,55,15, Male,Yes,Asian,748.24
+4027,3261,279,5,63,11, Male,Yes,Asian,6888.28
+268,5343,383,2,61,13, Male,Yes,Asian,319.57
+2127,4351,323,2,52,13, Male,Yes,Caucasian,2819.61
+2756,2820,219,1,57,16,Female,Yes,Asian,2941.28
+431,4229,337,3,52,13,Female,Yes,Caucasian,1543.18
+2542,5829,427,4,54,15,Female,Yes,Asian,3730.53
+580,906,120,1,54,10, Male,Yes,African American,456.25
+1443,5149,388,5,62,14, Male,Yes,Asian,874.52
+2912,3189,263,3,60,13, Male,No,Asian,4553.33
+4218,906,103,1,55,10, Male,Yes,African American,7613.45
+1131,7416,549,3,54,14, Male,No,Asian,1786.58
+4097,5611,411,4,59,15,Female,No,Caucasian,6537.74
+4752,3250,226,2,52,13,Female,Yes,Caucasian,8695.15
+2159,2179,167,1,53,13, Male,No,African American,3256.27
+5247,3409,270,2,54,17,Female,Yes,Caucasian,8786.32
+2376,5382,231,2,55,9, Male,No,Asian,3245.84
+2034,3821,281,4,58,13,Female,Yes,Asian,2383.01
+2504,2561,215,2,54,16, Male,Yes,Caucasian,2847.45
+1626,3560,232,2,53,13,Female,Yes,Asian,1579.27
+3894,3206,243,2,61,14,Female,Yes,Caucasian,6178.03
+1480,3075,245,2,53,15,Female,No,African American,1527.12
+4601,3838,296,5,56,12, Male,No,Asian,9678.25
+676,3274,282,9,63,13, Male,Yes,Caucasian,222.05
+2230,4160,320,4,61,12,Female,Yes,Caucasian,2005.34
+3224,3274,282,9,53,15, Male,Yes,Caucasian,4555.27
+553,5183,376,3,54,14, Male,Yes,Asian,540.25
+3667,1705,228,2,55,14, Male,Yes,Asian,7091.31
+1001,7518,543,2,54,16,Female,No,African American,1149.63
+1407,6906,527,6,59,15,Female,No,Caucasian,2156.1
+1087,5524,415,5,61,15,Female,No,Asian,1354.68
+1339,6127,433,1,59,12, Male,Yes,Caucasian,1941.5
+2063,11200,817,7,56,14, Male,Yes,African American,1677.4
+1496,4840,368,3,52,14,Female,Yes,Caucasian,2283.74
+3967,7333,529,6,58,15,Female,Yes,Caucasian,6496.2
+2303,3690,299,2,55,13, Male,No,Asian,2172.57
+1942,6090,442,3,53,12, Male,No,Caucasian,1693.98
+657,2278,187,1,56,11, Male,Yes,Caucasian,1075.95
+437,2607,221,2,58,14, Male,Yes,Caucasian,226.15
+3212,4327,320,2,59,14, Male,No,African American,4751.63
+567,3388,259,2,59,12,Female,No,Asian,628.9
+2029,4896,387,3,59,14,Female,No,Caucasian,2500.81
+4092,7667,554,2,56,15, Male,No,African American,8464.76
+1301,7818,584,4,58,15, Male,Yes,Caucasian,801.78
+1381,6457,455,2,49,16,Female,Yes,Caucasian,1905.57
+2254,1647,256,1,56,11,Female,Yes,Caucasian,3001.3
+3108,3449,288,3,61,14,Female,Yes,Caucasian,3642.82
+1682,6784,499,2,52,17,Female,No,African American,1640.86
+4973,5182,402,3,58,13, Male,Yes,Asian,10793.46
+714,1551,138,1,57,15,Female,Yes,African American,830
+1326,6481,462,2,56,16,Female,Yes,Caucasian,1802.44
+1933,5303,377,1,58,15, Male,No,Caucasian,2083.64
+2006,5245,383,2,55,15, Male,No,Asian,2240.29
+2787,5107,380,1,60,12, Male,Yes,Caucasian,3927.09
+698,6662,508,3,62,16,Female,No,Asian,1333.27
+1016,2820,219,1,61,13,Female,Yes,Asian,739.62
+2177,1448,145,1,59,15,Female,Yes,African American,2654.01
+1725,6457,455,2,57,13,Female,Yes,Caucasian,2276.86
+2695,1567,142,1,66,18, Male,Yes,African American,3596.88
+1986,9310,665,3,52,13,Female,Yes,Asian,2442.7
+357,5343,383,2,61,14, Male,Yes,Asian,376.22
+4655,2529,192,1,56,14,Female,Yes,Caucasian,7293.84
+1259,5521,406,2,60,16,Female,Yes,Caucasian,1882.6
+1519,3098,272,4,57,12, Male,Yes,Caucasian,1601.66
+1647,6819,505,4,59,13, Male,Yes,Caucasian,1625.33
+1885,5182,402,3,54,17, Male,Yes,Asian,1844.32
+1055,5466,413,4,59,14, Male,Yes,Asian,1033.62
+5424,5673,411,4,50,15,Female,Yes,Asian,9681.89
+5427,3500,226,2,57,15,Female,No,African American,11411.24
+5553,5180,382,3,57,10, Male,Yes,Asian,14198.91
+5549,7760,538,3,60,11,Female,No,African American,11899.72
+1974,6384,448,1,58,14,Female,Yes,Asian,1559.69
+1909,6396,485,3,54,14,Female,Yes,Caucasian,2750.2
+509,4336,339,1,56,16, Male,Yes,Caucasian,1475.37
+3617,5013,379,2,57,15,Female,Yes,African American,5057.43
+4855,6819,505,4,61,13, Male,Yes,Caucasian,10388.29
+2873,2327,178,1,62,12,Female,Yes,Caucasian,3348.15
+3097,7010,494,3,52,15,Female,Yes,Caucasian,3702.27
+1323,5835,452,3,56,13,Female,Yes,Asian,2050.85
+2704,8100,581,2,58,15,Female,Yes,Caucasian,3421.77
+3823,6662,508,3,57,15,Female,No,Asian,6148.27
+2833,5319,377,3,58,18,Female,No,Asian,3133.12
+1706,1705,226,2,52,14, Male,Yes,African American,2487.25
+3483,2330,203,1,52,13,Female,No,African American,5774.84
+5257,3271,250,2,52,16,Female,Yes,Asian,10136.22
+2060,3557,263,1,52,16,Female,Yes,Asian,1965.75
+4860,4742,372,7,51,15,Female,Yes,Asian,9463.86
+4332,3274,282,9,49,14, Male,Yes,Caucasian,8068.56
+4437,4640,332,2,54,15, Male,No,Asian,8044.36
+1348,5352,385,4,55,12,Female,Yes,Caucasian,1564.1
+2274,7402,538,2,57,14,Female,Yes,Asian,3339.82
+3139,2532,205,1,55,16, Male,Yes,Asian,4586.16
+5108,4943,362,2,61,17,Female,Yes,Asian,9270.94
+2068,5395,392,3,56,12, Male,Yes,Caucasian,2632.65
+3739,7402,538,2,59,13,Female,Yes,Asian,6270.16
+4130,2433,190,1,53,17,Female,No,Caucasian,7150.33
+722,5666,413,4,58,12,Female,Yes,Caucasian,693.78
+5396,3922,299,2,50,15,Female,Yes,Caucasian,11271.96
+2619,5977,429,4,55,13, Male,Yes,Asian,3059.8
+1019,2150,173,1,58,12, Male,No,Caucasian,1613.23
+3727,5869,439,2,55,11,Female,No,African American,6151.56
+3907,7576,527,2,59,9,Female,Yes,Caucasian,5838.08
+4670,11200,839,6,51,12, Male,Yes,Caucasian,9430.4
+4469,4697,344,4,52,11, Male,No,Asian,9156.34
+395,10230,721,3,54,16, Male,Yes,Asian,1158.72
+4004,5149,388,5,57,17, Male,Yes,Asian,6704.25
+1021,6555,472,2,58,16,Female,No,Caucasian,1063.64
+3706,1410,137,1,58,16, Male,No,African American,7355.01
+4991,855,123,1,58,10,Female,Yes,African American,8959.29
+3281,5183,376,2,55,12, Male,Yes,African American,4948.32
+3332,7818,584,4,57,13, Male,Yes,Caucasian,4815.83
+3530,7659,538,2,60,10, Male,Yes,Asian,6261.09
+5044,4706,353,6,60,15, Male,No,Asian,10793.5
+5217,3976,291,2,61,14, Male,Yes,Caucasian,11897.42
+3982,2531,195,1,57,17,Female,Yes,Caucasian,5685.53
+2233,7306,522,2,54,15, Male,No,Asian,2840.62
+2337,5565,410,4,56,15,Female,Yes,Caucasian,2775.4
+1611,4697,344,4,58,16, Male,No,Asian,1776.69
+3503,5390,418,4,53,14,Female,Yes,Caucasian,4705.18
+4222,7398,517,2,59,16, Male,Yes,African American,8550
+5017,9824,685,3,58,13, Male,Yes,Asian,11608.33
+2234,2120,181,1,59,13, Male,Yes,African American,3462.33
+710,5884,438,4,62,14, Male,No,Caucasian,851.13
+4847,3351,262,2,51,14,Female,Yes,Asian,9144.4
+4996,2955,229,2,55,15, Male,Yes,African American,10442.76
+2208,1134,128,1,54,10, Male,Yes,African American,3341.25
+2025,9704,694,4,61,13,Female,Yes,Asian,1916.72
+1480,7530,515,1,55,12, Male,Yes,Caucasian,1633.18
+2629,4632,355,1,53,16, Male,Yes,Caucasian,3673.68
+3097,2000,243,1,49,15,Female,Yes,African American,4186.15
+4879,7056,481,1,59,17,Female,No,Caucasian,9599.86
+5476,4327,320,2,61,17, Male,No,African American,12863.7
+2366,4866,347,1,53,12,Female,No,Caucasian,2141.27
+4172,4442,316,1,57,15,Female,No,Asian,6059.62
+822,4742,372,7,65,11,Female,Yes,Asian,1693.04
+1293,7333,529,6,55,17,Female,Yes,Caucasian,1775.86
+2558,3206,243,2,54,15,Female,Yes,Caucasian,3345.16
+405,3180,224,2,57,18, Male,Yes,Caucasian,89.71
+4305,4100,307,3,57,16, Male,Yes,Caucasian,7690.09
+2359,5495,409,1,60,17, Male,No,Caucasian,2413.33
+328,5380,420,5,56,17, Male,Yes,Asian,306.95
+317,1448,145,1,58,13,Female,Yes,African American,1019.25
+4367,3878,321,8,47,13, Male,No,Caucasian,7372.62
+4350,11200,817,7,52,12, Male,Yes,Asian,7794.66
+936,5310,392,2,64,13,Female,No,Caucasian,870.37
+1588,1626,232,2,55,13,Female,Yes,Asian,1497.61
+511,6196,450,6,49,13,Female,No,Caucasian,796.07
+980,5343,383,2,58,9, Male,Yes,African American,776.18
+1488,10748,754,2,66,14, Male,No,Caucasian,2046.42
+4145,2117,186,1,49,15,Female,No,Caucasian,6892.29
+2052,3182,259,2,61,8,Female,Yes,Caucasian,2606.29
+5277,2161,173,1,50,16,Female,No,African American,9655.53
+2214,4952,360,4,57,17,Female,Yes,Caucasian,3421.21
+2824,5245,383,2,55,15, Male,No,Asian,3918.63
+5305,5072,364,1,55,15,Female,Yes,Caucasian,10442.4
+4351,2271,182,1,52,15,Female,No,Asian,7292.37
+3174,5145,389,3,57,16,Female,Yes,Asian,4781.23
+3229,5429,396,3,65,16,Female,Yes,Caucasian,4546
+2304,5354,383,2,54,13,Female,Yes,Caucasian,2427.16
+1010,10088,730,7,49,14,Female,Yes,Caucasian,1009.86
+3438,2529,192,1,54,12,Female,Yes,Caucasian,4199.64
+4276,4891,369,1,56,15, Male,No,Caucasian,8462.84
+1018,3155,235,2,50,14, Male,Yes,Caucasian,579.05
+2464,4716,342,2,53,12, Male,No,Caucasian,3162.89
+5064,3388,266,4,56,13,Female,Yes,African American,10009.26
+4945,1501,150,1,55,14, Male,Yes,African American,11131.14
+1385,10088,730,7,55,18,Female,Yes,Caucasian,1360.03
+3527,5245,383,2,59,15, Male,No,African American,5800.02
+2252,5000,353,2,54,15, Male,Yes,Caucasian,2680.22
+607,3327,253,2,56,11,Female,No,African American,1014.69
+4607,3096,236,2,49,15,Female,Yes,Caucasian,7178.15
+1610,1626,230,2,54,14,Female,Yes,Asian,1499.25
+3975,2748,228,2,55,15, Male,Yes,Caucasian,6676.3
+4688,4100,307,3,63,15, Male,Yes,Caucasian,9116.82
+3617,2327,178,1,60,16,Female,Yes,Caucasian,4870.32
+545,2863,223,2,55,12, Male,Yes,Asian,1016.67
+3126,6442,489,4,53,13, Male,Yes,Caucasian,5101.94
+427,4788,360,1,59,18, Male,Yes,Asian,350
+2580,5521,406,2,54,13,Female,Yes,Caucasian,3711.01
+2239,7140,507,2,58,11, Male,Yes,African American,2398.74
+1195,2220,188,1,46,14, Male,No,Caucasian,1348.82
+2942,5354,383,2,55,11,Female,Yes,Caucasian,3473.62
+2713,3762,287,3,55,10, Male,Yes,Caucasian,4153.06
+902,5149,388,5,59,12, Male,Yes,Asian,294.38
+2354,2420,192,1,58,14,Female,Yes,Caucasian,3147.59
+4569,10290,817,7,50,12, Male,Yes,Caucasian,9447.54
+4459,1626,222,2,61,15,Female,Yes,Asian,7017.25
+4089,3873,292,1,48,15,Female,Yes,Asian,6295.6
+2957,2923,232,2,59,15, Male,Yes,African American,3744.58
+3634,7333,529,6,53,14,Female,Yes,Caucasian,5618.37
+2341,5835,452,2,57,15,Female,Yes,African American,3414.14
+2528,4923,355,1,60,15,Female,Yes,Asian,3074.79
+2046,5140,374,1,54,18, Male,Yes,Caucasian,2739.7
+1155,3821,281,4,54,13,Female,Yes,Asian,1346.62
+295,1362,143,1,56,15,Female,Yes,African American,390.14
+689,3182,225,2,49,15,Female,Yes,Caucasian,1234.71
+1515,4891,369,2,60,15, Male,No,African American,1713.75
+1012,10230,721,3,60,16, Male,Yes,Caucasian,1638.32
+1489,2880,214,2,54,15, Male,No,African American,1108.78
+3173,5869,439,2,55,15,Female,No,African American,4867.78
+530,4788,360,1,63,16, Male,Yes,Asian,397.55
+5024,2220,188,1,51,12, Male,No,African American,11355.48
+3391,906,109,1,51,10, Male,Yes,African American,5015.62
+2988,8157,599,2,58,16, Male,Yes,Caucasian,5223.13
+473,7555,547,3,58,15, Male,Yes,Asian,841.78
+3515,1647,224,1,53,13,Female,Yes,Asian,5485.14
+3400,8028,599,3,63,10, Male,Yes,Caucasian,5607.9
+310,4756,351,2,52,15,Female,Yes,Caucasian,1140.25
+1763,3250,229,2,54,14, Male,No,Asian,1533.87
+1672,7056,481,1,63,15,Female,No,Caucasian,2508.83
+3611,3340,227,2,55,17, Male,Yes,Caucasian,5845.18
+3338,3351,262,2,59,16,Female,Yes,Asian,5162.92
+690,4442,316,2,63,14,Female,No,African American,599.16
+3263,8376,610,2,63,14, Male,No,Asian,6207.28
+4795,7167,515,2,57,15,Female,No,African American,8107.19
+3084,7518,543,3,51,9,Female,No,African American,3955.5
+2127,5199,401,4,49,13, Male,Yes,Asian,1644.19
+2271,1551,141,1,54,12,Female,Yes,African American,2456.82
+707,7075,514,4,64,12, Male,No,Asian,864.73
+5105,8603,621,3,59,11,Female,No,Caucasian,9609.07
+1518,3291,269,2,55,12,Female,No,African American,2220.17
+4243,1786,223,2,53,16,Female,Yes,African American,6919.04
+2341,1567,142,1,49,19, Male,Yes,African American,2895.31
+2685,3211,265,4,55,17,Female,No,Asian,3509.87
+2262,5384,398,2,56,14,Female,Yes,African American,3230.84
+3121,5099,380,2,57,14,Female,No,African American,4654.91
+2286,3922,299,2,58,18,Female,Yes,Caucasian,3363.2
+5218,3977,304,2,52,12,Female,No,African American,10847.85
+274,6754,483,2,57,16, Male,Yes,Caucasian,43.29
+3101,8117,589,4,46,14, Male,Yes,Caucasian,3908.44
+1567,2910,236,2,60,15,Female,Yes,Caucasian,2007.56
+3965,6384,448,1,58,13,Female,Yes,Asian,5304.97
+3424,3476,227,2,57,11,Female,No,Caucasian,4759.86
+2808,3155,235,2,61,10, Male,Yes,Caucasian,3406.4
+4267,4756,351,2,59,8,Female,Yes,Caucasian,7315.31
+5094,855,127,1,55,10,Female,Yes,African American,8835.02
+3764,8732,636,3,50,14, Male,Yes,Caucasian,6439.65
+1543,10673,750,3,52,13, Male,No,Asian,1601.85
+902,5222,370,4,60,14,Female,No,Caucasian,1625.72
+1731,4768,365,4,49,12,Female,No,Caucasian,1835.62
+1152,1357,126,1,53,11, Male,No,African American,666.11
+4587,3907,296,2,54,14, Male,No,Caucasian,8639.62
+3749,1233,127,1,54,10,Female,Yes,African American,6212.03
+5469,4523,338,4,51,9, Male,No,Caucasian,12304.76
+2344,2558,220,2,60,17,Female,No,Caucasian,2655.05
+1943,1402,128,1,55,14,Female,Yes,African American,2038.84
+4672,5145,389,3,57,15,Female,Yes,Asian,8600.23
+2312,10384,728,3,62,14, Male,No,Caucasian,3381.03
+2743,3606,283,2,53,15, Male,Yes,Caucasian,3222.38
+2413,6127,433,1,61,16, Male,Yes,Caucasian,3686.74
+1998,4891,369,1,52,12, Male,No,Caucasian,2384.08
+408,8047,569,4,52,13, Male,No,Caucasian,774.48
+3625,2168,206,2,55,13, Male,No,African American,6175.23
+4402,5354,383,2,55,13,Female,Yes,Caucasian,6917.08
+557,4828,369,5,52,14,Female,No,Asian,1336.91
+733,2646,199,1,51,13, Male,Yes,Asian,257.64
+3610,1357,126,1,49,11, Male,No,African American,5621.94
+4090,1568,233,2,56,13, Male,Yes,African American,7630.27
+2421,9310,665,3,57,13,Female,Yes,Asian,3095.27
+202,4943,362,2,57,11,Female,Yes,Asian,764.37
+4162,1552,142,1,61,16,Female,No,African American,6556.78
+2641,6637,491,4,54,16, Male,Yes,Caucasian,3130.54
+497,6033,449,4,54,16, Male,Yes,Caucasian,643.78
+5101,4323,326,5,54,15,Female,Yes,Asian,8519.51
+2208,4866,347,1,55,15,Female,No,Caucasian,2022.56
+1443,3873,292,1,61,12,Female,Yes,Asian,1540.78
+708,6386,469,4,52,15,Female,Yes,Caucasian,1316.87
+4786,10230,721,3,52,15, Male,Yes,Caucasian,11102.28
+2288,5977,429,4,59,13, Male,Yes,Asian,2381.04
+2553,4952,360,4,55,17,Female,Yes,Caucasian,3984.25
+976,6375,469,3,51,15,Female,Yes,Caucasian,668.02
+1058,4943,362,2,59,13,Female,Yes,Asian,1213.24
+5384,4742,372,7,66,13,Female,Yes,Asian,11178.85
+1741,4891,369,1,53,15, Male,No,Caucasian,2040.59
+2886,2161,173,1,54,14,Female,No,African American,3549.86
+2311,4828,369,2,62,18,Female,No,African American,3263.26
+4644,4171,321,5,59,16,Female,Yes,Caucasian,8365.05
+4289,2539,188,1,59,15, Male,Yes,Asian,8074.59
+4485,2937,223,2,54,13,Female,Yes,African American,8332.83
+2624,3075,245,2,63,19,Female,No,African American,3096.46
+481,9560,701,3,52,14,Female,No,Asian,977.34
+3499,2420,192,1,61,17,Female,Yes,Caucasian,5375.65
+5338,3270,231,2,52,12, Male,No,Asian,12073.04
+2332,5891,434,4,51,14,Female,No,Caucasian,3412.34
+4928,3211,265,4,54,13,Female,No,Asian,9030.67
+3744,2493,186,1,54,14, Male,Yes,Asian,6839.8
+5553,9310,665,3,69,15,Female,Yes,Asian,11187.5
+1564,4433,344,3,60,15, Male,No,Caucasian,1710.14
+1827,3969,301,2,51,14, Male,Yes,African American,1611.27
+3748,2430,191,1,52,11,Female,Yes,Asian,5521.96
+5427,3584,294,5,52,15, Male,Yes,Asian,13224.13
+1112,5000,353,2,61,14, Male,Yes,Caucasian,942.24
+2224,8117,589,4,53,15, Male,Yes,Caucasian,1961.01
+4414,5137,387,3,60,12, Male,No,African American,8715.57
+743,2832,249,2,57,15, Male,No,Caucasian,703.22
+5017,2271,182,1,50,18,Female,No,Asian,9295.73
+1600,3280,225,2,57,11, Male,No,Asian,1900.49
+3559,5310,392,2,54,13,Female,No,Caucasian,4733.48
+3327,5891,434,4,56,15,Female,No,Caucasian,5305.88
+1696,9504,681,3,54,15,Female,No,Asian,1442.69
+4449,1774,238,1,58,16,Female,No,Asian,8002.3
+2267,1448,145,1,52,16,Female,Yes,African American,2822.46
+1612,5765,437,3,54,14,Female,No,Asian,1807.85
+996,3480,281,2,54,13, Male,Yes,Caucasian,1397.55
+416,3874,298,3,59,16,Female,Yes,Asian,668.1
+267,5614,430,3,54,16,Female,Yes,Caucasian,708.96
+3199,2863,223,2,62,15, Male,Yes,Asian,5402.03
+301,3907,296,3,50,14, Male,Yes,Caucasian,251.29
+2289,4952,360,4,52,14,Female,Yes,Caucasian,3561.94
+2904,9272,656,2,59,16, Male,No,Asian,4644.42
+1366,5384,398,2,58,18,Female,Yes,African American,2073.61
+864,6754,483,2,54,13, Male,Yes,Caucasian,281.28
+4208,5198,364,2,52,14,Female,No,Asian,6377.62
+672,3878,321,8,59,14, Male,No,Caucasian,35.25
+3383,4970,352,2,62,12, Male,Yes,African American,6176.17
+3789,855,120,1,59,10, Male,Yes,African American,6151.32
+586,2525,192,1,55,12, Male,Yes,Caucasian,527.07
+1453,4763,351,2,54,17,Female,Yes,Asian,1885.41
+3954,4323,326,5,54,17, Male,Yes,Asian,6211.46
+3370,4896,387,3,57,16,Female,No,Caucasian,4942.65
+1595,1499,138,1,59,13,Female,Yes,African American,1566.27
+2538,5758,410,4,59,12, Male,No,Caucasian,2681.81
+5590,3180,224,2,59,12, Male,Yes,Caucasian,12949.39
+3561,3200,233,2,51,10,Female,Yes,Caucasian,4823.32
+880,2646,199,1,60,14, Male,Yes,Asian,348.79
+3046,3746,280,2,48,13,Female,Yes,Caucasian,3909.72
+4249,5891,434,4,54,11,Female,No,Caucasian,7594.48
+5391,9560,701,3,50,13,Female,No,Asian,10379.33
+4604,9504,681,3,55,19,Female,No,Asian,7224.65
+3050,5521,406,2,54,14,Female,Yes,Caucasian,4654.6
+719,3878,321,8,58,13, Male,No,Caucasian,28.45
+1830,2963,241,2,65,14,Female,No,African American,2438.79
+3776,8376,610,2,58,14, Male,No,Asian,7720.23
+2405,886,156,1,66,10, Male,Yes,African American,2821.48
+899,5395,392,3,55,14, Male,Yes,Caucasian,1062.64
+686,1311,138,1,51,10, Male,No,African American,1140.74
+514,3271,250,2,61,14,Female,Yes,Asian,1146.68
+1546,5390,418,4,58,9,Female,Yes,Caucasian,1461.91
+1100,3933,287,4,53,15, Male,Yes,Asian,986.74
+1410,9824,685,3,54,15, Male,Yes,Asian,1728.74
+3151,2561,215,2,54,12, Male,Yes,Caucasian,4406.3
+5089,4221,304,2,58,12, Male,No,African American,11075.74
+2340,855,129,1,64,10,Female,Yes,African American,3528.41
+1367,5869,439,5,53,15,Female,No,Asian,2018.09
+5145,1485,134,1,55,18,Female,No,African American,10427.22
+1209,8029,574,2,56,14, Male,Yes,Caucasian,1771.49
+1740,7576,527,2,54,16,Female,Yes,Caucasian,1801.64
+4367,7140,507,2,63,12, Male,Yes,African American,8268.18
+4093,4284,338,5,57,13,Female,Yes,Caucasian,7028.22
+2832,3874,298,3,59,13,Female,Yes,Asian,3327.53
+1060,3096,236,2,51,12,Female,Yes,Caucasian,779.38
+3438,8100,581,2,55,17,Female,Yes,Caucasian,4823.61
+5234,2529,192,1,56,10,Female,Yes,Caucasian,9077.12
+1059,5043,376,2,57,13,Female,Yes,Asian,1580.79
+1420,2998,251,2,56,10, Male,No,Caucasian,2082.67
+2592,1335,138,1,64,11, Male,No,African American,3807.81
+473,3615,263,2,49,12, Male,No,African American,945.1
+3238,4391,358,5,59,13,Female,Yes,Caucasian,3903.27
+3533,3402,231,2,52,16, Male,Yes,Asian,6397.54
+4965,5835,452,2,63,14,Female,Yes,African American,9785.08
+457,9560,701,3,53,9,Female,No,Asian,965.09
+1707,5758,410,4,52,14, Male,No,Caucasian,1165.55
+4668,3388,266,4,54,15,Female,Yes,Asian,8760.91
+4494,5182,402,3,49,11, Male,Yes,Asian,8906.06
+2787,2278,187,1,58,14, Male,Yes,Caucasian,4413.41
+4667,7838,563,2,63,8,Female,No,Caucasian,7885.15
+2440,5179,398,2,60,12, Male,Yes,African American,2632.37
+847,2073,175,1,49,14,Female,Yes,Caucasian,1514.62
+1378,1787,221,1,55,15,Female,No,African American,1879.91
+2605,5611,411,4,66,13,Female,No,Caucasian,3350.24
+1967,10278,707,1,54,14, Male,No,Caucasian,3052.77
+855,1300,123,1,63,10,Female,No,African American,1635.94
+2009,6617,460,1,48,10,Female,Yes,Caucasian,2383.81
+2728,2910,236,2,56,15,Female,Yes,Caucasian,3755.6
+5404,5619,418,2,55,15,Female,Yes,Caucasian,11250.41
