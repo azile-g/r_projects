@@ -45,7 +45,7 @@ Bank2022P
 Income_cent <- c(Bank2022P$Income_cent)
 Income_cent_sq <- c(Bank2022P$Income_cent_sq)
 
-plot(Income_cent, Income_cent_sq, main = "Scatterplot of centered Income and it's square", xlab = "Income_cent", ylab = "Income_cent_sq")
+plot(Income_cent, Income_cent_sq, main = "Scatterplot of centered Income and its square", xlab = "Income_cent", ylab = "Income_cent_sq")
 correlation2 <- cor(Income_cent, Income_cent_sq, method = "pearson")
 correlation2
 
@@ -63,6 +63,67 @@ num1 <- which.min(summary1$bic)
 num1
 
 coef(regfit1, num1)
+```
+
+```{r}
+lm_0 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards, data = Bank2022P)
+lm_1 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender, data = Bank2022P)
+lm_2 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent_sq*Gender, data = Bank2022P)
+lm_3 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Cards, data = Bank2022P)
+lm_4 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent_sq*Cards, data = Bank2022P)
+lm_5 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Gender*Cards, data = Bank2022P)
+
+lm_6 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent_sq*Gender, data = Bank2022P)
+lm_7 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent*Cards, data = Bank2022P)
+lm_8 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent_sq*Cards, data = Bank2022P)
+lm_9 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Gender*Cards , data = Bank2022P)
+lm_10 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Cards + Income_cent_sq*Cards, data = Bank2022P)
+lm_11 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Cards + Income_cent_sq*Gender, data = Bank2022P)
+lm_12 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent_sq*Cards + Income_cent_sq*Gender, data = Bank2022P)
+
+lm_16 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent_sq*Gender + Income_cent*Cards, data = Bank2022P)
+lm_17 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent_sq*Gender + Income_cent_sq*Cards, data = Bank2022P)
+lm_18 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent_sq*Gender + Gender*Cards, data = Bank2022P)
+lm_19 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent*Cards + Income_cent_sq*Cards, data = Bank2022P)
+lm_20 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent*Cards + Gender*Cards, data = Bank2022P)
+lm_21 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent_sq*Cards+ Gender*Cards, data = Bank2022P)
+lm_22 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent_sq*Gender + Income_cent*Cards + Income_cent_sq*Cards, data = Bank2022P)
+lm_23 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent_sq*Gender + Income_cent*Cards + Gender*Cards, data = Bank2022P)
+lm_24 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent_sq*Gender + Income_cent_sq*Cards+ Gender*Cards, data = Bank2022P)
+lm_25 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Cards + Income_cent_sq*Cards+ Gender*Cards, data = Bank2022P)
+
+lm_29 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent_sq*Gender + Income_cent*Cards + Gender*Cards, data = Bank2022P)
+lm_30 <- lm(Balance~Income_cent+Income_cent_sq+Gender+Cards+Income_cent*Gender + Income_cent_sq*Gender + Income_cent*Cards + Income_cent_sq*Cards, data = Bank2022P)
+
+BIC(lm_0)
+
+BIC(lm_1) 
+BIC(lm_2)
+BIC(lm_3)
+BIC(lm_4)
+BIC(lm_5)
+BIC(lm_6)
+BIC(lm_7)
+BIC(lm_8)
+BIC(lm_9)
+BIC(lm_10)
+BIC(lm_11)
+BIC(lm_12)
+
+BIC(lm_16)
+BIC(lm_17)
+BIC(lm_18)
+BIC(lm_19)
+BIC(lm_20)
+BIC(lm_21)
+BIC(lm_22)
+BIC(lm_23)
+BIC(lm_24)
+BIC(lm_25)
+
+BIC(lm_29)
+BIC(lm_30)
+
 ```
 
 
