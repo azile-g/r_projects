@@ -1,0 +1,113 @@
+
+```{r}
+#1) Load leaflet 
+library(leaflet); library(ggmap); library(magrittr)
+
+#2) Complete expression m
+m <- leaflet() %>% 
+  addTiles() %>% 
+  setView(lng = 31.13767, lat = 29.97515, zoom = 7)
+
+#3) Display map
+m
+
+```
+
+```{r}
+
+#1) & 2) addProviderTiles and change zoom value to 15
+m <- leaflet() %>% 
+  addProviderTiles(provider = providers$Esri.WorldImagery) %>% 
+  setView(lng = 31.13767, lat = 29.97515, zoom = 15)
+
+#3) display map
+m
+
+```
+
+```{r}
+
+#1) Use text and change zoom value
+m <- leaflet() %>% 
+  addProviderTiles(provider = "Esri.WorldImagery") %>% 
+  setView(lng = 31.13767, lat = 29.97515, zoom = 7)
+
+#2) display map
+m
+
+```
+
+```{r}
+library(shiny); library(leaflet) #a1) load leaflet 
+
+#d1) create vector basemaps 
+basemaps <- c("Esri.WorldImagery", "Stamen.Terrain", "OpenTopoMap", "Stamen.Watercolor")
+
+#a2) & 3) & 4) set up title and numeric inputs and call leaflet output
+ui <- fluidPage(
+  titlePanel("Where do you want to go today?"), 
+  numericInput("longitude", "Enter a longitude",
+               value = 174.8, min = -180, max = 180, step = 0.1),
+  numericInput("latitude", "Enter a latitude",
+               value = -36.9, min = -90, max = 90, step = 0.05),
+  sliderInput("zoom_level", "Enter a zoom level", 
+              min = 3, max = 18, value = 11, step = 1), #c1) create zoom slider
+  selectInput("basemap", "Select a basemap", 
+              choices = basemaps, selected = "Esri.WorldImagery"), #d2) create selection for variable basemap
+  leafletOutput("m")
+)
+
+#b1) & 2) assign render leaflet and map widget 
+server <- function(input, output, session) {
+  output$m <- renderLeaflet({
+    m <- leaflet() %>% 
+      addProviderTiles(provider = input$basemap) %>% #d3) extract reactive object for provider
+      setView(lng = input$longitude, 
+              lat = input$latitude, 
+              zoom = input$zoom_level) #c2) extract reactive object for zoom
+  })
+}
+
+shinyApp(ui, server)  
+
+#b) This is how I would test run app local to my device from console (?):
+#runApp("C:/Users/ELIZABETH CHENG/Desktop/School Stuff/Year 2/DSA w R/Assignments/Assignment 3")
+
+```
+
+```{r}
+library(shiny); library(ggplot2)
+
+ui <- fluidPage(
+
+    # Application title
+    titlePanel("Simple linear regression"),
+    numericInput("a", "Enter intercept", 
+                 value = 0, min = -5, max = 5, step = 0.25), 
+    numericInput("b", "Enter slope", 
+                 value = 1, min = -5, max = 5, step = 0.25),
+    sliderInput("n", "Enter sample size", 
+                value = 50, min = 25, max = 250, step = 25), 
+    plotOutput("plot")
+    
+)
+
+server <- function(input, output) {
+
+    output$plot <- renderPlot({
+        e <- rnorm(input$n, 0, sqrt(1))
+        x <- rnorm(input$n, 1, sqrt(0.25))
+        y <- input$a + input$b*x + e
+        DF <- data.frame(x, y) 
+        
+        ggplot(data = DF, aes(x = x, y = y)) +
+            geom_point(size = 2, colour = "deepskyblue2") +
+            geom_smooth(method = "lm", se = 90, colour = "deepskyblue4") +
+            theme_grey(base_size = 18)
+
+    })
+}
+
+shinyApp(ui, server)
+
+```

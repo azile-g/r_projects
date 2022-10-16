@@ -1,0 +1,620 @@
+---
+title: "Summary sheet"
+output: html_notebook
+---
+
+#ggplot2
+```{r}
+#load data
+library(mdsr)
+data(CIACountries)
+```
+
+#Scatterplots
+```{r}
+#Scatterplot with secondary aesthetics and adjusted scale 
+ggplot(data = CIACountries, aes(x = educ, y = gdp)) +
+  geom_point(aes(colour = net_users, size = roadways)) +
+  coord_trans(y = "log10")
+
+#facet wrapping
+ggplot(data = CIACountries, aes(x = educ, y = gdp)) +
+  geom_point(aes(size = roadways), alpha = 0.6) +
+  facet_wrap(~net_users, nrow = 1) +
+  theme(legend.position = "top")
+
+#plot woth regression line 
+ggplot(data = CIACountries, aes(x = educ, y = gdp)) +
+  geom_point(aes(colour = net_users, size = roadways)) +
+  coord_trans(y = "log10") +
+  geom_smooth(method = "lm", se = 0) #method = loess
+
+```
+
+#Histograms
+```{r}
+ggplot(data = SAT_2010, aes(x = math)) +
+  geom_histogram(binwidth = 10) +
+  xlab("SAT scores for Math") +
+  ylab("Number of students")
+```
+
+#Density plot 
+```{r}
+ggplot(data = SAT_2010, aes(x = math)) +
+  geom_density(adjust = 0.3)
+```
+
+#Box plots 
+```{r}
+ggplot(data = KidsFeet, aes(x = sex, y = length)) + 
+  geom_boxplot()
+```
+
+#Timeseries plot 
+```{r}
+#library(mdsr)
+ggplot(data = SwimRecords, aes(x = year, y = time)) + 
+  geom_point(aes(shape = sex, color = sex), size = 3) + 
+  geom_line(aes(color = sex))
+SwimRecords
+```
+
+#bar charts
+```{r}
+library(diamonds)
+
+ggplot(data = diamonds, aes(x = cut)) +  # Create a colored bar chart
+  geom_bar(aes(fill = clarity))
+```
+
+#dplyr
+```{r}
+glimpse(presidential)
+
+```
+
+#select and filter 
+```{r}
+my_presidents <- presidential %>% 
+  filter(start > 1973 & party == "Democratic") %>% 
+  select(name)
+```
+
+#mutate and rename and arrange
+```{r}
+library(lubridate)
+
+#mutate and rename
+my_presidents <- presidential %>% 
+  mutate(term.length = interval(start, end)/dyears(1)) %>% 
+  rename(term_length = term.length)
+
+#arrange in descending and aescending order 
+longest_10_terms <- my_presidents %>% 
+  arrange(desc(term_length)) %>% 
+  head(10)
+longest_10_terms
+
+shortest_10_terms <- my_presidents %>% 
+  arrange(term_length) %>% 
+  head(10)
+shortest_10_terms
+```
+
+#summarise and group_by 
+```{r}
+presidents_summary <- my_presidents %>% 
+  group_by(party) %>% 
+  summarise(n = n(), first_year = min(year(start)), last_year = max(year(end)), num_democrats = sum((party == "Democratic")), num_republican = sum(party == "Republican"), years = sum(term_length), avrg_term_length = mean(term_length))
+
+presidents_summary
+```
+
+#inner_join and left_join 
+```{r}
+flights_joined <- flights %>% 
+  inner_join(airlines, by = "carrier")
+
+flights_joined <- flights %>% 
+  left_join(airlines, by = "carrier") #returns NAs where no matched columns are found 
+```
+
+#tidyr
+```{r}
+library(tidyr)
+library(DSR)
+glimpse(table4)
+glimpse(table2)
+
+```
+
+#pivot_longer
+```{r}
+table4 %>% 
+  pivot_longer(cols = -country, #deselect column that you want to keep 
+               names_to = "year", #assign variable names to a column
+               values_to = "cases", #assign values to a column 
+               names_transform = list(year = as.integer)) #transform key variable 
+```
+
+#pivot_wider
+```{r}
+table2 %>% 
+  pivot_wider(names_from = "key", 
+              values_from = "value")
+```
+
+#Vectors, lists, dataframes 
+```{r}
+x <- C(1, 2, 3, 4, 5) 
+x <- 1:5
+x[1] #retirve one element 
+x[3:4] #retrieve partial vector 
+x[2] <- 5 #assign value to elemtn 
+
+y <- list(instuition = "SMU", 
+          university = TRUE, age = 20, 
+          schools = c("SOA", "SOB", "SOE", "SIS", "SOSS", "SOL"))
+y[1] #returns a sublist of 1st component
+y[3:4] #returns sublist of 3rd and 4th component 
+y[[1]] #returns contets of 1st component 
+y[[1]][1] #returns 1st element of 1st compenent 
+
+z <- data.frame(name = c("Gabriel", "Michael", "Raphael"), 
+                age = c(8, 5, 2), 
+                gender = c("Male", "Male", "Male"))
+z[1, ] #retuns first row of z
+z[, 1] #returns first column of z
+z[i, j] #returns row i, column j 
+z$gender #returns gender column 
+z$age[1] #returns first element of age column 
+```
+
+#iteration w for loops 
+```{r}
+#iteration of formulas 
+eff <- c(0, 1, 1, 2, 3, 5, 8, 13, 21)
+
+for(i in 1:9) {
+  eff[i] <- eff[i]^2
+  print(eff[i])
+}
+
+#print fibonacci sequence 
+fibo <- c(0, 1)
+
+for(i in 1:10) {
+  fibo <- append(fibo, (fibo[i]+fibo[i+1]))
+}
+
+print(fibo)
+
+#print odd numbers 
+x <- 1:90 
+
+length(x)
+
+for (i in 1:45) {
+  print(x[2*i-1])
+}
+
+#find average of 26 columns 
+averages <- 1:26 
+for (i in 15:40) { 
+  averages[i-14] <- mean(Teams[, i], na.rm = TRUE) 
+  } 
+names(averages) <- names(Teams)[15:40] averages
+
+```
+
+#apply - for rows and columns of a dataframe 
+```{r}
+Teams %>% 
+  select(15:40) %>% #select dataframe to apply 
+  apply(MARGIN = 2, #MARGIN = 1 applies to rows, 2 applies to columns 
+        FUN = mean, #fucntion to apply 
+        na.rm = TRUE) #remove NA 
+```
+
+#sapply, lapply - for each element in a vector or list
+```{r}
+sapply(name_of_vector, FUN = nchar)
+lapply(name_of_list, FUN = nchar)
+
+```
+
+#dplyr::do 
+Apply an arbitary function to groups in a dataframe with group_by and do
+```{r}
+#define fucntion
+HR_leader <- function(x) 
+  { 
+  y <- x %>% # x is a subset of Teams for a single year and league
+    select(yearID, lgID, teamID, HR) %>% 
+    arrange(desc(HR)) %>% 
+    head(1)
+  
+    return(y)
+  }
+
+HR_leaders <- Teams %>% 
+  group_by(yearID, lgID) %>% 
+  do(HR_leader(.))
+
+head(HR_leaders, 4)
+
+```
+
+#Define own functions 
+```{r}
+circle_area <- function(r) { 
+  return(pi*r^2) 
+  }
+```
+
+#Data import 
+```{r}
+#save any r object to a file 
+save(ants, file = "ant_farm.Rda", compress = "xz") 
+#compress: gzip, bzip2
+
+#load stored object 
+load(file = "ant_farm.Rda")
+```
+
+#rvest - web scraping 
+```{r}
+library(rvest)
+
+#Path to HTML document
+URL <- "http://en.wikipedia.org/wiki/Mile_run_world_record_progression"
+
+HTML_tables <- URL %>% 
+  read_html() %>% #Read content in hTML document 
+  html_nodes("table") #Extract alltables from HTML document 
+
+#results in a list of tables found in the webpage 
+
+HTML_tables[[1]] #access first table 
+
+table4 <- html_table(HTML_tables[[4]]) %>% #read 4th html table into df
+  select(-Auto) %>% #deselct and whichever clearning up needed 
+  head(6)
+table4
+```
+
+#readr - cleaning data w parse_number
+```{r}
+library(readr)
+
+OrdwayBirds <- OrdwayBirds %>% 
+  mutate(Year = parse_number(Year), 
+         Month = parse_number(Month), 
+         Day = parse_number(Day)) #drops any non-numeric characters before or after the first number, empty stirng are converted to NAs 
+
+OrdwayBirds %>% 
+  select(Timestamp, Year, Month, Day) %>% 
+  glimpse()
+
+#read csv file into df 
+dem_score <- read_csv("https://moderndive.com/data/dem_score.csv") dem_score
+
+```
+
+#lubridate - cleaning dates 
+```{r}
+WhenandWho <- OrdwayBirds %>% 
+  mutate(When = mdy_hms(Timestamp)) %>% 
+  select(Timestamp, Year, Month, Day, When, DataEntryPerson) %>% 
+  glimpse()
+```
+
+#Interactive data graphics 
+```{r}
+library(babynames)
+glimpse(babynames)
+# Manipulate the babynames data frame 
+Beatles <- babynames %>% 
+  filter(name %in% c("John", "Paul", "George", "Ringo") & sex == "M")
+# Create a static plot of the frequencies of Beatles names over time 
+BeatlesPlot <- ggplot(data = Beatles, aes(x = year, y = n)) +
+  geom_line(aes(color = name), size = 1) + 
+  theme_grey(base_size = 18)
+
+#%in% operator can be used to match conditions provided in a vector 
+```
+
+#plotly 
+```{r}
+library(plotly)
+ggplotly(BeatlesPlot)
+
+```
+
+#DT 
+```{r}
+library(DT)
+datatable(Beatles, options = list(pageLength = 12))
+
+```
+
+#gygraphs 
+```{r}
+library(dygraphs)
+Beatles %>% 
+  select(year, name, prop) %>% 
+  pivot_wider(names_from = "name", values_from = "prop") %>% 
+  dygraph(main = "Popularity of Beatles names over time") %>% 
+  dyRangeSelector(dateWindow = c("1940", "1980"))
+```
+
+#Shiny - refer to app in L6 
+```{r}
+#Local shiny server 
+library(shiny)
+runApp(appDir = getwd())
+
+```
+
+#Geospatial analysis 
+
+#Working with Shapefiles 
+```{r}
+library(rgdal)
+
+#Step 1: load path to shapefile 
+DSN <- "C:/Users/ELIZABETH CHENG/Desktop/School Stuff/Year 2/DSA w R/9 - Geospatial Analysis 1/SnowGIS_SHP"
+list.files(DSN)
+
+#Step 2: list layers in the path 
+ogrListLayers(DSN)
+
+#Step 3: get information about a layer 
+ogrInfo(DSN, layer = "Cholera_Deaths")
+
+#Step 4: load a layer into R 
+cholera_deaths <- readOGR(DSN, layer = "Cholera_Deaths")
+
+#Step 5: ways of presenting data
+cholera_deaths
+summary(cholera_deaths)
+str(cholera_deaths@data)
+as.data.frame(cholera_deaths)
+
+```
+
+#Creating the object that plots points 
+```{r}
+library(ggmap)
+library(ggplot2)
+
+df_cholera_deaths <- as.data.frame(cholera_deaths) #bind longitude to x1, and latitude to x2, create data frame
+df_cholera_deaths
+
+plot_cholera_deaths <- ggplot(data = df_cholera_deaths, aes(x = coords.x1, y = coords.x2)) +
+  geom_point()
+
+plot_cholera_deaths
+
+```
+
+#creating the object that plots the map 
+```{r}
+library(ggmap)
+
+#Step 1: get map from service provider 
+map <- get_map(location = "John Snow, London, England", zoom = 17, 
+               maptype = "roadmap", source = "google")
+
+#Step 2: plot the map object 
+ggmap(map)
+
+```
+
+#Map projections: projectin the points and map layers onto the same system
+```{r}
+head(df_cholera_deaths) #The data points are in coordinates 
+attr(map, "bb") #The map is in lng lat pairs 
+
+#Projection systems 
+library(maps)
+
+map("world", projection = "mercator", wrap = TRUE)
+map("world", projection  = "cylequalarea", param = 45, wrap = TRUE)
+map("state", projection = "lambert", parameters = c(lat0 = 20, lat1 = 50), wrap = TRUE)
+map("state", projection = "albers", parameters = c(lat0 = 20, lat1 = 50), wrap = TRUE)
+```
+
+#CRS: coordinate refrence system standardisation
+```{r}
+#retrieve projtion string (sp)
+proj4string(cholera_deaths)
+
+#EPSG shorthands for projection strings (rgdal)
+CRS("+init=epsg:4326") #Used for google earth and GPS systems
+CRS("+init=epsg:3857") #Used for google maps and map svc providers 
+CRS("+init=epsg:27700") #Used for Britian
+
+#Google maps tiles are in epsg:3857, but they are returned with epsg:4326
+cholera_latlon <- spTransform(cholera_deaths, CRS("+init=epsg:4326"))
+df_cholera_latlon <- as.data.frame(cholera_latlon)
+
+bbox(cholera_latlon) 
+
+```
+
+#Plotting points and map 
+```{r}
+John_snow <- ggmap(map) +
+  geom_point(data = df_cholera_latlon, aes(x = coords.x1, y = coords.x2, size = Count))
+
+John_snow
+
+```
+
+#Putting it together with the pump layer 
+```{r}
+
+pumps <- readOGR(DSN, layer = "Pumps")
+
+pumps_latlon <- spTransform(pumps, CRS("+init=epsg:4326"))
+
+John_snow + 
+  geom_point(data = as.data.frame(pumps_latlon), aes(x = coords.x1, y = coords.x2, size = 3, colour = "red"))
+
+```
+
+#Geocoding, mapping distances and routes
+```{r}
+#geocoding with ggmap 
+
+SMU <- "81 Victoria Street, Singapore 188065"
+geocode(SMU) #get lon/lat 
+NUS <- "21 Lower zkent Ridge Rd, Singapore 119077"
+geocode(NUS)
+
+#Distance between 2 locations 
+mapdist(from = SMU, to = NUS, mode = "transit")
+
+#Routes between 2 locations 
+legs_df <- route(from = SMU, to = NUS, mode = "driving", alternatives = TRUE, structure = "legs")
+legs_df
+
+#Plot route with qmap and geom_leg
+qmap("205 Henderson Rd, Singapore 159549", zoom = 13, maptype = "roadmap", source = "google") +
+  geom_leg(data = legs_df, aes(x = start_lon, y = start_lat, 
+                               xend = end_lon, yend = end_lat, 
+                               colour = route, alpha = 0.7, size = 2))
+
+```
+
+#Leaflet and shiny integration
+```{r}
+library(leaflet); library(dplyr)
+
+#Get geographic coordinates for the Istana 
+Istana <- geocode("35 Orchard Rd, Singapore 238823")
+Istana <- Istana %>% 
+  mutate(title = "The Istana", address = "35 Orchard Rd")
+
+#Leaflet map widget
+Istana_map <- leaflet() %>% 
+  addTiles() %>% 
+  addMarkers(data = Istana, lng = ~lon, lat = ~lat) %>% 
+  addPopups(data = Istana, lng = ~lon, lat = ~lat, 
+            popup = ~paste0("<b>", title, "</b><br>", address))
+
+Istana_map
+
+```
+
+#Network Science 
+
+#Using DBI package to run SQL query and retrieve resultset for R 
+```{r}
+#connect to mdsr MySQL server 
+db <- src_scidb("imdb")
+db
+
+library(DBI); library(dplyr) #use dbplyr specifically for 
+
+#Formulate SQL query using text string 
+sql <- 
+"SELECT 
+   a.person_id AS src, b.person_id AS dest, a.movie_id,
+   a.nr_order * b.nr_order AS weight, c.title,
+   d.info AS ratings
+ FROM cast_info a
+ INNER JOIN cast_info b ON a.movie_id = b.movie_id    
+ LEFT JOIN title c ON a.movie_id = c.id
+ LEFT JOIN movie_info_idx d ON a.movie_id = d.movie_id 
+ WHERE c.production_year = 2012 AND c.kind_id = 1
+   AND d.info_type_id = 100 AND d.info > 125000
+   AND a.nr_order <= 20 AND b.nr_order <= 10
+   AND a.role_id IN (1, 2) AND b.role_id IN (1, 2)
+   AND a.person_id < b.person_id
+ GROUP BY src, dest, a.movie_id
+LIMIT 0, 20"
+
+E <- dbGetQuery(db$con, sql) %>% 
+  mutate(ratings = as.numeric(ratings))
+
+head(E, 8)
+
+```
+
+#Using db connection and dplyr::tb1
+```{r}
+actor_ids <- unique(c(E$src, E$dest))
+
+#Retrieve veritices 
+V <- tbl(db, "name") %>% 
+  filter(id %in% actor_ids) %>% 
+  select(id, name) %>% 
+  rename(actor_name = name) %>% 
+  collect() %>% 
+  arrange(id)
+#collect() breaks connection to mySQL server and pulls resultset into R 
+
+head(V, 8)
+
+```
+
+#igraph library
+```{r}
+library(igraph)
+
+#graph_from_data_frame() to build a graph
+g <- graph_from_data_frame(E, directed = FALSE, vertices = V)
+g #create igraph object
+summary(g) 
+
+g <- set_vertex_attr(g, "imbdId", value = V(g)$name)
+
+plot(g, edge.color = "lightgray", vertex.size = 2, 
+     vertex.label = NA)
+
+```
+
+#degree of centrality 
+```{r}
+g <- set_vertex_attr(g, "degree", value = degree(g))
+
+as_data_frame(g, what = "vertices") %>% 
+  arrange(desc(degree)) %>% 
+  head(6)
+
+```
+
+#density plot for degree of centrality
+```{r}
+library(ggplot2)
+
+ggplot(data = data.frame(degree = degree(g)), aes(x = degree)) +
+  geom_density(fill = "deepskyblue", size = 0.1, alpha = 0.6) +
+  theme_grey(base_size = 14) +
+  xlab("Degree") + xlab("Density estimate")
+
+```
+
+#betweeness centrality 
+```{r}
+g <- set_vertex_attr(g, "btw", value = betweenness(g, normalized = TRUE))
+
+as_data_frame(g, what = "vertices") %>% 
+  arrange(desc(degree)) %>% 
+  head(6)
+
+```
+
+#compute diameter of largest connected component of Hollywood network
+```{r}
+diameter(g, weights = NA)
+
+SW <- V(g)[actor_name == "Worthington, Sam"]
+eccentricity(g, vids = SW)
+#eccentricity indicates that there is nobody in the network that is more than x numbers away 
+```
+
+
