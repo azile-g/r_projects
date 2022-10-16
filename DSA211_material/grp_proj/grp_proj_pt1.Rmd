@@ -10,6 +10,7 @@ output: html_document
 library(car)
 library(dplyr)
 library(magrittr)
+library(leaps)
 
 #reader
 Bank2022P <- read.csv("Bank2022P.csv", stringsAsFactors = TRUE)
@@ -23,18 +24,6 @@ summary(lm1)
 #Run linear regression on all significant independent variables, Income, Income^2, Gender and Cards
 lm2 <- lm(Balance~Income+I(Income^2)+Cards+Gender, data = Bank2022P)
 summary(lm2)
-```
-
-```{r}
-regfit1 <- regsubsets(Balance~., Bank2022P, nvmax = 10)
-summary1 <- summary(regfit1)
-
-plot(summary1$bic, main = "Best subset procedure with BIC", xlab = "NUmber of variables", ylab = "BIC", type = "b")
-
-num1 <- which.min(summary1$bic)
-num1
-
-coef(regfit1, num1)
 ```
 
 ```{r}
@@ -64,7 +53,17 @@ lm2_2 <- lm(Balance~Income_cent+Income_cent_sq+Cards+Gender, data = Bank2022P)
 vif(lm2_2)
 ```
 
+```{r}
+regfit1 <- regsubsets(Balance~., force.in = "Income_cent", Bank2022P, nvmax = 11)
+summary1 <- summary(regfit1)
 
+plot(summary1$bic, main = "Best subset procedure with BIC", xlab = "NUmber of variables", ylab = "BIC", type = "b")
+
+num1 <- which.min(summary1$bic)
+num1
+
+coef(regfit1, num1)
+```
 
 
 
